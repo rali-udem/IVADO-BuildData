@@ -1,6 +1,6 @@
 {"header":[["FPTO11","CWTO","EST5EDT","regulier",2021,1,5,1600,0,"prochaine_prevision",2021,1,5,2030,30]],
- "names-en":["** r1124a **"],
- "names-fr":["** r1124a **"],
+ "names-en":["Ottawa North - Kanata - Orléans"],
+ "names-fr":["Ville d'Ottawa nord - Kanata - Orléans"],
  "regions":[["r1124a"]],
  "ciel":[[0,25,10,10,9],
          [25,29,9,9,9],
@@ -357,5 +357,5 @@
           [195,204,"nil","vitesse",5],
           [204,240,"w","vitesse",10]],
  "visib":[[5,14,"bancs_brouillard","continu"]],
- "en":"** no bulletin **",
- "fr":"** no bulletin **"}
+ "en":"Ottawa North - Kanata - Orléans.\nToday..Periods of light snow ending this afternoon then cloudy with\n 30 percent chance of flurries. Wind up to 15 km/h. Temperature\n steady near minus 2. Wind chill near minus 5.\nTonight..Cloudy. 30 percent chance of flurries this evening. Wind up\n to 15 km/h. Temperature steady near minus 4. Wind chill near\n minus 9.\nWednesday..Cloudy. Wind becoming north 20 km/h in the morning.\n Temperature steady near minus 3. UV index 1 or low. Wind chill\n minus 11 in the morning and minus 6 in the afternoon.",
+ "fr":"Ville d'Ottawa nord - Kanata - Orléans.\nAujourd'hui..Faible neige intermittente cessant cet après-midi.\n Nuageux par la suite avec 30 pour cent de probabilité d'averses de\n neige. Vents jusqu'à 15 km/h. Températures stables près de moins 2.\n Refroidissement éolien près de moins 5.\nCe soir et cette nuit..Nuageux. 30 pour cent de probabilité d'averses\n de neige ce soir. Vents jusqu'à 15 km/h. Températures stables près\n de moins 4. Refroidissement éolien près de moins 9.\nMercredi..Nuageux. Vents devenant du nord à 20 km/h le matin.\n Températures stables près de moins 3. Indice UV de 1 ou bas.\n Refroidissement éolien moins 11 le matin et moins 6 en après-midi."}

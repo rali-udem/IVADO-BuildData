@@ -50,7 +50,7 @@ def tokenize(code):
 ##   res    ::= {region} "."
 ##   region ::= {para}  ## separated by a para starting with an ID
 ##   para   ::= paraId: {list} ";"
-##   list   ::= "(" (float | int | id | list)  ")"
+##   list   ::= "(" {float | int | id | list}  ")"
 ##
 ##  the result is an object whose keys are paraId and value list of value
 

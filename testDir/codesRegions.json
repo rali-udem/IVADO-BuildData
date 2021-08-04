@@ -898,5 +898,13 @@
   "r74.19": {
     "en": "Blanc-Sablon",
     "fr": "Blanc-Sablon"
+  },
+  "r1124a": {
+    "en": "Ottawa North - Kanata - Orléans",
+    "fr": "Ville d'Ottawa nord - Kanata - Orléans"
+  },
+  "r1124b": {
+    "en": "Ottawa South - Richmond - Metcalfe",
+    "fr": "Ville d'Ottawa sud - Richmond - Metcalfe"
   }
 }

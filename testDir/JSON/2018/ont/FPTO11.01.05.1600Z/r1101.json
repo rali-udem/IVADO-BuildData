@@ -356,20 +356,5 @@
           [198,207,"w","vitesse",15],
           [207,234,"w","vitesse",20],
           [234,240,"w","vitesse",30]],
- "en":"City of Toronto.
-Today..Cloudy with 40 percent chance of flurries. High plus 2.
-Tonight..Cloudy. 30 percent chance of flurries this evening. Risk of
- freezing drizzle this evening and overnight. Wind becoming northwest
- 20 km/h this evening. Low minus 4. Wind chill minus 9 overnight.
-Wednesday..Overcast. Risk of freezing drizzle in the morning. Wind
- north 20 km/h. High plus 2. Wind chill minus 10 in the morning.",
- "fr":"Ville de Toronto.
-Aujourd'hui..Nuageux avec 40 pour cent de probabilité d'averses de
- neige. Maximum plus 2.
-Ce soir et cette nuit..Nuageux. 30 pour cent de probabilité d'averses
- de neige ce soir. Risque de bruine verglaçante ce soir et au cours
- de la nuit. Vents devenant du nord-ouest à 20 km/h ce soir. Minimum
- moins 4. Refroidissement éolien moins 9 au cours de la nuit.
-Mercredi..Couvert. Risque de bruine verglaçante le matin. Vents du
- nord de 20 km/h. Maximum plus 2. Refroidissement éolien moins 10 le
- matin."}
+ "en":"City of Toronto.\nToday..Cloudy with 40 percent chance of flurries. High plus 2.\nTonight..Cloudy. 30 percent chance of flurries this evening. Risk of\n freezing drizzle this evening and overnight. Wind becoming northwest\n 20 km/h this evening. Low minus 4. Wind chill minus 9 overnight.\nWednesday..Overcast. Risk of freezing drizzle in the morning. Wind\n north 20 km/h. High plus 2. Wind chill minus 10 in the morning.",
+ "fr":"Ville de Toronto.\nAujourd'hui..Nuageux avec 40 pour cent de probabilité d'averses de\n neige. Maximum plus 2.\nCe soir et cette nuit..Nuageux. 30 pour cent de probabilité d'averses\n de neige ce soir. Risque de bruine verglaçante ce soir et au cours\n de la nuit. Vents devenant du nord-ouest à 20 km/h ce soir. Minimum\n moins 4. Refroidissement éolien moins 9 au cours de la nuit.\nMercredi..Couvert. Risque de bruine verglaçante le matin. Vents du\n nord de 20 km/h. Maximum plus 2. Refroidissement éolien moins 10 le\n matin."}

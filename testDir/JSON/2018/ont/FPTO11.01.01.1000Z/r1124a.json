@@ -1,6 +1,6 @@
 {"header":[["FPTO11","CWTO","EST5EDT","regulier",2021,1,1,1000,0,"prochaine_prevision",2021,1,1,1600,0]],
- "names-en":["** r1124a **"],
- "names-fr":["** r1124a **"],
+ "names-en":["Ottawa North - Kanata - Orléans"],
+ "names-fr":["Ville d'Ottawa nord - Kanata - Orléans"],
  "regions":[["r1124a"]],
  "accum":[[-23,-20,"neige","totale","pres_de",20.0],
           [30,33,"neige","totale","pres_de",50.0,100.0],
@@ -393,5 +393,5 @@
           [174,192,"nil","vitesse",5],
           [192,198,"nw","vitesse",10],
           [198,216,"nil","vitesse",5]],
- "en":"** no bulletin **",
- "fr":"** no bulletin **"}
+ "en":"Ottawa North - Kanata - Orléans.\nToday..Overcast. Wind up to 15 km/h. High zero. Wind chill minus 11\n this morning.\nTonight..Becoming cloudy this evening. Snow beginning late this\n evening. Amount 5 to 10 cm. Wind up to 15 km/h. Low minus 5. Wind\n chill minus 6 this evening and minus 11 overnight.\nSaturday..Snow ending near noon then cloudy. Amount 2 to 4 cm. Wind\n northeast 20 km/h becoming light early in the morning. High zero. UV\n index 1 or low. Wind chill minus 11 in the morning.",
+ "fr":"Ville d'Ottawa nord - Kanata - Orléans.\nAujourd'hui..Couvert. Vents jusqu'à 15 km/h. Maximum zéro.\n Refroidissement éolien moins 11 ce matin.\nCe soir et cette nuit..Devenant nuageux ce soir. Neige débutant tard\n ce soir. Accumulation de 5 à 10 cm. Vents jusqu'à 15 km/h. Minimum\n moins 5. Refroidissement éolien moins 6 ce soir et moins 11 au cours\n de la nuit.\nSamedi..Neige cessant en mi-journée. Nuageux par la suite.\n Accumulation de 2 à 4 cm. Vents du nord-est de 20 km/h devenant\n légers tôt le matin. Maximum zéro. Indice UV de 1 ou bas.\n Refroidissement éolien moins 11 le matin."}

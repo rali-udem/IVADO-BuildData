@@ -363,24 +363,5 @@
           [195,207,"nil","vitesse",5],
           [207,240,"w","vitesse",10]],
  "visib":[[5,14,"bancs_brouillard","continu"]],
- "en":"Gatineau.
-Today..Periods of light snow ending this afternoon then cloudy with
- 30 percent chance of flurries. Wind up to 15 km/h. Temperature
- steady near minus 2. Wind chill near minus 5.
-Tonight..Cloudy. 30 percent chance of flurries this evening. Wind up
- to 15 km/h. Temperature steady near minus 4. Wind chill near
- minus 8.
-Wednesday..Mainly cloudy. Wind becoming north 20 km/h in the morning.
- Temperature steady near minus 2. UV index 1 or low. Wind chill near
- minus 9.",
- "fr":"Gatineau.
-Aujourd'hui..Faible neige intermittente cessant cet après-midi.
- Nuageux par la suite avec 30 pour cent de probabilité d'averses de
- neige. Vents jusqu'à 15 km/h. Températures stables près de moins 2.
- Refroidissement éolien près de moins 5.
-Ce soir et cette nuit..Nuageux. 30 pour cent de probabilité d'averses
- de neige ce soir. Vents jusqu'à 15 km/h. Températures stables près
- de moins 4. Refroidissement éolien près de moins 8.
-Mercredi..Généralement nuageux. Vents devenant du nord à 20 km/h le
- matin. Températures stables près de moins 2. Indice UV de 1 ou bas.
- Refroidissement éolien près de moins 9."}
+ "en":"Gatineau.\nToday..Periods of light snow ending this afternoon then cloudy with\n 30 percent chance of flurries. Wind up to 15 km/h. Temperature\n steady near minus 2. Wind chill near minus 5.\nTonight..Cloudy. 30 percent chance of flurries this evening. Wind up\n to 15 km/h. Temperature steady near minus 4. Wind chill near\n minus 8.\nWednesday..Mainly cloudy. Wind becoming north 20 km/h in the morning.\n Temperature steady near minus 2. UV index 1 or low. Wind chill near\n minus 9.",
+ "fr":"Gatineau.\nAujourd'hui..Faible neige intermittente cessant cet après-midi.\n Nuageux par la suite avec 30 pour cent de probabilité d'averses de\n neige. Vents jusqu'à 15 km/h. Températures stables près de moins 2.\n Refroidissement éolien près de moins 5.\nCe soir et cette nuit..Nuageux. 30 pour cent de probabilité d'averses\n de neige ce soir. Vents jusqu'à 15 km/h. Températures stables près\n de moins 4. Refroidissement éolien près de moins 8.\nMercredi..Généralement nuageux. Vents devenant du nord à 20 km/h le\n matin. Températures stables près de moins 2. Indice UV de 1 ou bas.\n Refroidissement éolien près de moins 9."}

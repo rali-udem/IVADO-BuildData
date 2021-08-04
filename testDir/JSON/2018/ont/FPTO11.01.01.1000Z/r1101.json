@@ -471,29 +471,5 @@
           [189,195,"nw","vitesse",20],
           [195,204,"w","vitesse",15],
           [204,216,"sw","vitesse",15]],
- "en":"City of Toronto.
-Today..Mainly cloudy. Snow beginning late this afternoon. Wind
- becoming east 30 km/h gusting to 50 late this morning. High plus 2.
- UV index 1 or low. Wind chill minus 7 this morning.
-Tonight..Snow mixed with ice pellets changing to rain near midnight
- then to snow before morning. Risk of freezing rain late this evening
- and overnight. Snow and ice pellet amount 2 to 4 cm. Wind east
- 30 km/h gusting to 50 becoming light overnight. Wind becoming north
- 20 before morning. Temperature steady near plus 1.
-Saturday..Snow ending in the morning then a mix of sun and cloud.
- Wind north 30 km/h becoming light in the morning. Temperature steady
- near plus 2. UV index 1 or low.",
- "fr":"Ville de Toronto.
-Aujourd'hui..Généralement nuageux. Neige débutant tard cet
- après-midi. Vents devenant d'est à 30 km/h avec rafales à 50 tard ce
- matin. Maximum plus 2. Indice UV de 1 ou bas. Refroidissement éolien
- moins 7 ce matin.
-Ce soir et cette nuit..Neige mêlée de grésil se changeant en pluie
- vers minuit puis en neige en fin de nuit. Risque de pluie
- verglaçante tard ce soir et au cours de la nuit. Accumulation de
- neige et de grésil de 2 à 4 cm. Vents d'est de 30 km/h avec rafales
- à 50 devenant légers au cours de la nuit. Vents devenant du nord à
- 20 en fin de nuit. Températures stables près de plus 1.
-Samedi..Neige cessant le matin. Alternance de soleil et de nuages par
- la suite. Vents du nord de 30 km/h devenant légers le matin.
- Températures stables près de plus 2. Indice UV de 1 ou bas."}
+ "en":"City of Toronto.\nToday..Mainly cloudy. Snow beginning late this afternoon. Wind\n becoming east 30 km/h gusting to 50 late this morning. High plus 2.\n UV index 1 or low. Wind chill minus 7 this morning.\nTonight..Snow mixed with ice pellets changing to rain near midnight\n then to snow before morning. Risk of freezing rain late this evening\n and overnight. Snow and ice pellet amount 2 to 4 cm. Wind east\n 30 km/h gusting to 50 becoming light overnight. Wind becoming north\n 20 before morning. Temperature steady near plus 1.\nSaturday..Snow ending in the morning then a mix of sun and cloud.\n Wind north 30 km/h becoming light in the morning. Temperature steady\n near plus 2. UV index 1 or low.",
+ "fr":"Ville de Toronto.\nAujourd'hui..Généralement nuageux. Neige débutant tard cet\n après-midi. Vents devenant d'est à 30 km/h avec rafales à 50 tard ce\n matin. Maximum plus 2. Indice UV de 1 ou bas. Refroidissement éolien\n moins 7 ce matin.\nCe soir et cette nuit..Neige mêlée de grésil se changeant en pluie\n vers minuit puis en neige en fin de nuit. Risque de pluie\n verglaçante tard ce soir et au cours de la nuit. Accumulation de\n neige et de grésil de 2 à 4 cm. Vents d'est de 30 km/h avec rafales\n à 50 devenant légers au cours de la nuit. Vents devenant du nord à\n 20 en fin de nuit. Températures stables près de plus 1.\nSamedi..Neige cessant le matin. Alternance de soleil et de nuages par\n la suite. Vents du nord de 30 km/h devenant légers le matin.\n Températures stables près de plus 2. Indice UV de 1 ou bas."}

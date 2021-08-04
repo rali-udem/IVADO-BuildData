@@ -63,7 +63,7 @@ def combineBulletin(jsonFN,obj):
         if not os.path.exists(regionJSONdir):
             os.makedirs(regionJSONdir)
         regionJSONFN=f"{regionJSONdir}/{regionNos[0]}.json"
-        ppJson(open(regionJSONFN,"w",encoding="utf-8"),res)
+        ppJson(open(regionJSONFN,"w",encoding="utf-8"),res,0,False)
 
 
 ## check parsing of a single file
@@ -81,7 +81,7 @@ def makeJSON(year,prov):
         jsonFN=jsonDir+bulletinFN[len(meteocodeDir):]+".json"
         print("processing",jsonFN)
         if not os.path.exists(jsonFN):
-            ppJson(open(jsonFN,"w"),obj)
+            ppJson(open(jsonFN,"w"),obj,0,False)
             combineBulletin(jsonFN,obj)
             print("added",jsonFN)
 
