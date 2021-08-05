@@ -1,918 +1,1172 @@
 {
   "r1101": {
+    "bulletin": "FPTO11",
     "en": "City of Toronto",
     "fr": "Ville de Toronto"
   },
-  "r1111c": {
-    "en": "Mississauga - Brampton",
-    "fr": "Mississauga - Brampton"
-  },
-  "r1112a": {
-    "en": "Vaughan - Richmond Hill - Markham",
-    "fr": "Vaughan - Richmond Hill - Markham"
-  },
   "r1102": {
+    "bulletin": "FPTO11",
     "en": "Windsor - Essex - Chatham-Kent",
     "fr": "Windsor - Essex - Chatham-Kent"
   },
-  "r1103": {
-    "en": "Sarnia - Lambton",
-    "fr": "Sarnia - Lambton"
-  },
-  "r1104": {
-    "en": "Elgin",
-    "fr": "Elgin"
-  },
-  "r1105": {
-    "en": "London - Middlesex",
-    "fr": "London - Middlesex"
-  },
-  "r1106": {
-    "en": "Simcoe - Delhi - Norfolk",
-    "fr": "Simcoe - Delhi - Norfolk"
-  },
-  "r1107": {
-    "en": "Dunnville - Caledonia - Haldimand",
-    "fr": "Dunnville - Caledonia - Haldimand"
-  },
-  "r1108": {
-    "en": "Oxford - Brant",
-    "fr": "Oxford - Brant"
-  },
-  "r1114a": {
-    "en": "Kitchener - Cambridge - Region of Waterloo",
-    "fr": "Kitchener - Cambridge - région de Waterloo"
-  },
-  "r1114b": {
-    "en": "Guelph - Erin - Southern Wellington County",
-    "fr": "Guelph - Erin - comté de Wellington sud"
-  },
-  "r1109": {
-    "en": "Niagara",
-    "fr": "Niagara"
-  },
-  "r1110": {
-    "en": "City of Hamilton",
-    "fr": "Ville de Hamilton"
-  },
-  "r1111a": {
-    "en": "Burlington - Oakville",
-    "fr": "Burlington - Oakville"
-  },
-  "r1111b": {
-    "en": "Halton Hills - Milton",
-    "fr": "Halton Hills - Milton"
-  },
-  "r1111d": {
-    "en": "Caledon",
-    "fr": "Caledon"
-  },
-  "r1112b": {
-    "en": "Newmarket - Georgina - Northern York Region",
-    "fr": "Newmarket - Georgina - région de York nord"
-  },
-  "r1112": {
-    "en": "York - Durham",
-    "fr": "York - Durham"
-  },
-  "r1115": {
-    "en": "Dufferin - Innisfil",
-    "fr": "Dufferin - Innisfil"
-  },
-  "r1112c": {
-    "en": "Pickering - Oshawa - Southern Durham Region",
-    "fr": "Pickering - Oshawa - région de Durham sud"
-  },
-  "r1112d": {
-    "en": "Uxbridge - Beaverton - Northern Durham Region",
-    "fr": "Uxbridge - Beaverton - région de Durham nord"
-  },
-  "r1113": {
-    "en": "Huron - Perth",
-    "fr": "Huron - Perth"
-  },
-  "r1116a": {
-    "en": "Saugeen Shores - Kincardine - Southern Bruce County",
-    "fr": "Saugeen Shores - Kincardine - comté de Bruce sud"
-  },
-  "r1114c": {
-    "en": "Mount Forest - Arthur - Northern Wellington County",
-    "fr": "Mount Forest - Arthur - comté de Wellington nord"
-  },
-  "r1116c": {
-    "en": "Hanover - Dundalk - Southern Grey County",
-    "fr": "Hanover - Dundalk - comté de Grey sud"
-  },
-  "r1116b": {
-    "en": "Bruce Peninsula - Sauble Beach - Tobermory",
-    "fr": "Péninsule de Bruce - Sauble Beach - Tobermory"
-  },
-  "r1116d": {
-    "en": "Owen Sound - Blue Mountains - Northern Grey County",
-    "fr": "Owen Sound - Blue Mountains - comté de Grey nord"
-  },
-  "r1117": {
-    "en": "Barrie - Orillia - Midland",
-    "fr": "Barrie - Orillia - Midland"
-  },
-  "r1118a": {
-    "en": "Cobourg - Colborne - Western Northumberland County",
-    "fr": "Cobourg - Colborne - comté de Northumberland ouest"
-  },
-  "r1118b": {
-    "en": "Belleville - Quinte West - Eastern Northumberland County",
-    "fr": "Belleville - Quinte ouest - comté de Northumberland est"
-  },
-  "r1119": {
-    "en": "Kingston - Prince Edward",
-    "fr": "Kingston - Prince Edward"
-  },
-  "r1121": {
-    "en": "Stirling - Tweed - South Frontenac",
-    "fr": "Stirling - Tweed - Frontenac sud"
-  },
-  "r1120": {
-    "en": "Peterborough - Kawartha Lakes",
-    "fr": "Peterborough - Kawartha Lakes"
-  },
-  "r1122a": {
-    "en": "Kaladar - Bannockburn - Bon Echo Park",
-    "fr": "Kaladar - Bannockburn - parc Bon Echo"
-  },
-  "r1122b": {
-    "en": "Bancroft - Hastings Highlands - Denbigh",
-    "fr": "Bancroft - Hastings Highlands - Denbigh"
-  },
-  "r1130": {
-    "en": "Haliburton",
-    "fr": "Haliburton"
-  },
-  "r1123": {
-    "en": "Brockville - Leeds and Grenville",
-    "fr": "Brockville - Leeds et Grenville"
-  },
-  "r1128": {
-    "en": "Smiths Falls - Lanark - Sharbot Lake",
-    "fr": "Smiths Falls - Lanark - Sharbot Lake"
-  },
-  "r1124": {
-    "en": "City of Ottawa",
-    "fr": "Ville d'Ottawa"
-  },
-  "r1125": {
-    "en": "Gatineau",
-    "fr": "Gatineau"
-  },
-  "r1126": {
-    "en": "Prescott and Russell",
-    "fr": "Prescott et Russell"
-  },
-  "r1127": {
-    "en": "Cornwall - Morrisburg",
-    "fr": "Cornwall - Morrisburg"
-  },
-  "r1129a": {
-    "en": "Port Carling - Port Severn",
-    "fr": "Port Carling - Port Severn"
-  },
-  "r1129b": {
-    "en": "Bracebridge - Gravenhurst",
-    "fr": "Bracebridge - Gravenhurst"
-  },
-  "r1129c": {
-    "en": "Town of Parry Sound - Rosseau - Killbear Park",
-    "fr": "Ville de Parry Sound - Rosseau - parc Killbear"
-  },
-  "r1129d": {
-    "en": "Huntsville - Baysville",
-    "fr": "Huntsville - Baysville"
-  },
-  "r1131": {
-    "en": "Renfrew - Pembroke - Barry's Bay",
-    "fr": "Renfrew - Pembroke - Barry's Bay"
-  },
-  "r1132": {
-    "en": "Algonquin",
-    "fr": "Algonquin"
-  },
-  "r1133": {
-    "en": "Burk's Falls - Bayfield Inlet",
-    "fr": "Burk's Falls - Bayfield Inlet"
-  },
-  "r1103a": {
-    "en": "Sarnia - Petrolia - Western Lambton County",
-    "fr": "Sarnia - Petrolia - comté de Lambton ouest"
-  },
-  "r1103b": {
-    "en": "Watford - Pinery Park - Eastern Lambton County",
-    "fr": "Watford - parc Pinery - comté de Lambton est"
-  },
-  "r1105a": {
-    "en": "Strathroy - Komoka - Western Middlesex County",
-    "fr": "Strathroy - Komoka - comté de Middlesex ouest"
-  },
-  "r1105b": {
-    "en": "London - Parkhill - Eastern Middlesex County",
-    "fr": "London - Parkhill - comté de Middlesex est"
-  },
-  "r1109a": {
-    "en": "Niagara Falls - Welland - Southern Niagara Region",
-    "fr": "Niagara Falls - Welland - région de Niagara sud"
-  },
-  "r1109b": {
-    "en": "St. Catharines - Grimsby - Northern Niagara Region",
-    "fr": "St. Catharines - Grimsby - région de Niagara nord"
-  },
-  "r1115a": {
-    "en": "Orangeville - Grand Valley - Southern Dufferin County",
-    "fr": "Orangeville - Grand Valley - comté de Dufferin sud"
-  },
-  "r1113a": {
-    "en": "Goderich - Bluewater - Southern Huron County",
-    "fr": "Goderich - Bluewater - comté de Huron sud"
-  },
-  "r1113b": {
-    "en": "Wingham - Blyth - Northern Huron County",
-    "fr": "Wingham - Blyth - comté de Huron nord"
-  },
-  "r1113c": {
-    "en": "Stratford - Mitchell - Southern Perth County",
-    "fr": "Stratford - Mitchell - comté de Perth sud"
-  },
-  "r1113d": {
-    "en": "Listowel - Milverton - Northern Perth County",
-    "fr": "Listowel - Milverton - comté de Perth nord"
-  },
-  "r1114": {
-    "en": "Waterloo - Wellington",
-    "fr": "Waterloo - Wellington"
-  },
-  "r1115b": {
-    "en": "Shelburne - Mansfield - Northern Dufferin County",
-    "fr": "Shelburne - Mansfield - comté de Dufferin nord"
-  },
-  "r1115c": {
-    "en": "Innisfil - New Tecumseth - Angus",
-    "fr": "Innisfil - New Tecumseth - Angus"
-  },
-  "r1116": {
-    "en": "Grey - Bruce",
-    "fr": "Grey - Bruce"
-  },
-  "r1117a": {
-    "en": "Barrie - Collingwood - Hillsdale",
-    "fr": "Barrie - Collingwood - Hillsdale"
-  },
-  "r1117b": {
-    "en": "Midland - Coldwater - Orr Lake",
-    "fr": "Midland - Coldwater - Orr Lake"
-  },
-  "r1117c": {
-    "en": "Orillia - Lagoon City - Washago",
-    "fr": "Orillia - Lagoon City - Washago"
-  },
-  "r1119b": {
-    "en": "Napanee - Consecon",
-    "fr": "Napanee - Consecon"
-  },
-  "r1119c": {
-    "en": "Kingston - Odessa - Frontenac Islands",
-    "fr": "Kingston - Odessa - Îles Frontenac"
-  },
-  "r1119a": {
-    "en": "Picton - Sandbanks Park",
-    "fr": "Picton - parc Sandbanks"
-  },
-  "r1122": {
-    "en": "Bancroft - Bon Echo Park",
-    "fr": "Bancroft - parc Bon Echo"
-  },
-  "r1128a": {
-    "en": "Plevna - Sharbot Lake - Western Lanark County",
-    "fr": "Plevna - Sharbot Lake - comté de Lanark ouest"
-  },
-  "r1131a": {
-    "en": "Barry's Bay - Killaloe",
-    "fr": "Barry's Bay - Killaloe"
-  },
-  "r1123a": {
-    "en": "Gananoque - Mallorytown",
-    "fr": "Gananoque - Mallorytown"
-  },
-  "r1123c": {
-    "en": "Westport - Charleston Lake",
-    "fr": "Westport - Lac Charleston"
-  },
-  "r1123b": {
-    "en": "Brockville - Prescott",
-    "fr": "Brockville - Prescott"
-  },
-  "r1123d": {
-    "en": "Merrickville-Wolford - Kemptville",
-    "fr": "Merrickville-Wolford - Kemptville"
-  },
-  "r1127a": {
-    "en": "Morrisburg - Long Sault",
-    "fr": "Morrisburg - Long Sault"
-  },
-  "r1127c": {
-    "en": "Winchester - Newington",
-    "fr": "Winchester - Newington"
-  },
-  "r1128b": {
-    "en": "Smiths Falls - Perth - Eastern Lanark County",
-    "fr": "Smiths Falls - Perth - comté de Lanark est"
-  },
-  "r1127b": {
-    "en": "Cornwall - Lancaster",
-    "fr": "Cornwall - Lancaster"
-  },
-  "r1127d": {
-    "en": "Maxville - Alexandria",
-    "fr": "Maxville - Alexandria"
-  },
-  "r1129": {
-    "en": "Parry Sound - Muskoka",
-    "fr": "Parry Sound - Muskoka"
-  },
-  "r1131b": {
-    "en": "Renfrew - Arnprior - Calabogie",
-    "fr": "Renfrew - Arnprior - Calabogie"
-  },
-  "r1131c": {
-    "en": "Petawawa - Pembroke - Cobden",
-    "fr": "Petawawa - Pembroke - Cobden"
-  },
-  "r1108a": {
-    "en": "Woodstock - Tillsonburg - Oxford County",
-    "fr": "Woodstock - Tillsonburg - comté d'Oxford"
-  },
-  "r1108b": {
-    "en": "Brantford - County of Brant",
-    "fr": "Brantford - comté de Brant"
-  },
-  "r1118": {
-    "en": "Belleville - Quinte - Northumberland",
-    "fr": "Belleville - Quinte - Northumberland"
-  },
-  "r1133a": {
-    "en": "Bayfield Inlet - Dunchurch",
-    "fr": "Bayfield Inlet - Dunchurch"
-  },
-  "r1133b": {
-    "en": "South River - Burk's Falls",
-    "fr": "South River - Burk's Falls"
-  },
-  "r1120a": {
-    "en": "Lindsay - Southern Kawartha Lakes",
-    "fr": "Lindsay - Kawartha Lakes sud"
-  },
-  "r1120c": {
-    "en": "Peterborough City - Lakefield - Southern Peterborough County",
-    "fr": "Ville de Peterborough - Lakefield - comté de Peterborough sud"
-  },
-  "r1120b": {
-    "en": "Fenelon Falls - Balsam Lake Park - Northern Kawartha Lakes",
-    "fr": "Fenelon Falls - parc Balsam Lake - Kawartha Lakes nord"
-  },
-  "r1120d": {
-    "en": "Apsley - Woodview - Northern Peterborough County",
-    "fr": "Apsley - Woodview - comté de Peterborough nord"
-  },
   "r1102a": {
+    "bulletin": "FPTO11",
     "en": "Windsor - Leamington - Essex County",
     "fr": "Windsor - Leamington - comté d'Essex"
   },
   "r1102b": {
+    "bulletin": "FPTO11",
     "en": "Chatham-Kent - Rondeau Park",
     "fr": "Chatham-Kent - parc Rondeau"
   },
+  "r1103": {
+    "bulletin": "FPTO11",
+    "en": "Sarnia - Lambton",
+    "fr": "Sarnia - Lambton"
+  },
+  "r1103a": {
+    "bulletin": "FPTO11",
+    "en": "Sarnia - Petrolia - Western Lambton County",
+    "fr": "Sarnia - Petrolia - comté de Lambton ouest"
+  },
+  "r1103b": {
+    "bulletin": "FPTO11",
+    "en": "Watford - Pinery Park - Eastern Lambton County",
+    "fr": "Watford - parc Pinery - comté de Lambton est"
+  },
+  "r1104": {
+    "bulletin": "FPTO11",
+    "en": "Elgin",
+    "fr": "Elgin"
+  },
   "r1104a": {
+    "bulletin": "FPTO11",
     "en": "Rodney - Shedden - Western Elgin County",
     "fr": "Rodney - Shedden - comté d'Elgin ouest"
   },
   "r1104b": {
+    "bulletin": "FPTO11",
     "en": "St. Thomas - Aylmer - Eastern Elgin County",
     "fr": "St. Thomas - Aylmer - comté d'Elgin est"
   },
+  "r1105": {
+    "bulletin": "FPTO11",
+    "en": "London - Middlesex",
+    "fr": "London - Middlesex"
+  },
+  "r1105a": {
+    "bulletin": "FPTO11",
+    "en": "Strathroy - Komoka - Western Middlesex County",
+    "fr": "Strathroy - Komoka - comté de Middlesex ouest"
+  },
+  "r1105b": {
+    "bulletin": "FPTO11",
+    "en": "London - Parkhill - Eastern Middlesex County",
+    "fr": "London - Parkhill - comté de Middlesex est"
+  },
+  "r1106": {
+    "bulletin": "FPTO11",
+    "en": "Simcoe - Delhi - Norfolk",
+    "fr": "Simcoe - Delhi - Norfolk"
+  },
+  "r1107": {
+    "bulletin": "FPTO11",
+    "en": "Dunnville - Caledonia - Haldimand",
+    "fr": "Dunnville - Caledonia - Haldimand"
+  },
+  "r1108": {
+    "bulletin": "FPTO11",
+    "en": "Oxford - Brant",
+    "fr": "Oxford - Brant"
+  },
+  "r1108a": {
+    "bulletin": "FPTO11",
+    "en": "Woodstock - Tillsonburg - Oxford County",
+    "fr": "Woodstock - Tillsonburg - comté d'Oxford"
+  },
+  "r1108b": {
+    "bulletin": "FPTO11",
+    "en": "Brantford - County of Brant",
+    "fr": "Brantford - comté de Brant"
+  },
+  "r1109": {
+    "bulletin": "FPTO11",
+    "en": "Niagara",
+    "fr": "Niagara"
+  },
+  "r1109a": {
+    "bulletin": "FPTO11",
+    "en": "Niagara Falls - Welland - Southern Niagara Region",
+    "fr": "Niagara Falls - Welland - région de Niagara sud"
+  },
+  "r1109b": {
+    "bulletin": "FPTO11",
+    "en": "St. Catharines - Grimsby - Northern Niagara Region",
+    "fr": "St. Catharines - Grimsby - région de Niagara nord"
+  },
+  "r1110": {
+    "bulletin": "FPTO11",
+    "en": "City of Hamilton",
+    "fr": "Ville de Hamilton"
+  },
   "r1111": {
+    "bulletin": "FPTO11",
     "en": "Halton - Peel",
     "fr": "Halton - Peel"
   },
-  "r1132a": {
-    "en": "Western Algonquin Park - Lake of Two Rivers",
-    "fr": "Parc Algonquin ouest - Lake of Two Rivers"
+  "r1111a": {
+    "bulletin": "FPTO11",
+    "en": "Burlington - Oakville",
+    "fr": "Burlington - Oakville"
   },
-  "r1132b": {
-    "en": "Deep River - Whitney - Eastern Algonquin Park",
-    "fr": "Deep River - Whitney - parc Algonquin est"
+  "r1111b": {
+    "bulletin": "FPTO11",
+    "en": "Halton Hills - Milton",
+    "fr": "Halton Hills - Milton"
   },
-  "r1130a": {
-    "en": "Haliburton - Minden - Southern Haliburton County",
-    "fr": "Haliburton - Minden - comté d'Haliburton sud"
+  "r1111c": {
+    "bulletin": "FPTO11",
+    "en": "Mississauga - Brampton",
+    "fr": "Mississauga - Brampton"
   },
-  "r1130b": {
-    "en": "Oxtongue Lake - Fort Irwin - Northern Haliburton County",
-    "fr": "Oxtongue Lake - Fort Irwin - comté d'Haliburton nord"
+  "r1111d": {
+    "bulletin": "FPTO11",
+    "en": "Caledon",
+    "fr": "Caledon"
+  },
+  "r1112": {
+    "bulletin": "FPTO11",
+    "en": "York - Durham",
+    "fr": "York - Durham"
+  },
+  "r1112a": {
+    "bulletin": "FPTO11",
+    "en": "Vaughan - Richmond Hill - Markham",
+    "fr": "Vaughan - Richmond Hill - Markham"
+  },
+  "r1112b": {
+    "bulletin": "FPTO11",
+    "en": "Newmarket - Georgina - Northern York Region",
+    "fr": "Newmarket - Georgina - région de York nord"
+  },
+  "r1112c": {
+    "bulletin": "FPTO11",
+    "en": "Pickering - Oshawa - Southern Durham Region",
+    "fr": "Pickering - Oshawa - région de Durham sud"
+  },
+  "r1112d": {
+    "bulletin": "FPTO11",
+    "en": "Uxbridge - Beaverton - Northern Durham Region",
+    "fr": "Uxbridge - Beaverton - région de Durham nord"
+  },
+  "r1113": {
+    "bulletin": "FPTO11",
+    "en": "Huron - Perth",
+    "fr": "Huron - Perth"
+  },
+  "r1113a": {
+    "bulletin": "FPTO11",
+    "en": "Goderich - Bluewater - Southern Huron County",
+    "fr": "Goderich - Bluewater - comté de Huron sud"
+  },
+  "r1113b": {
+    "bulletin": "FPTO11",
+    "en": "Wingham - Blyth - Northern Huron County",
+    "fr": "Wingham - Blyth - comté de Huron nord"
+  },
+  "r1113c": {
+    "bulletin": "FPTO11",
+    "en": "Stratford - Mitchell - Southern Perth County",
+    "fr": "Stratford - Mitchell - comté de Perth sud"
+  },
+  "r1113d": {
+    "bulletin": "FPTO11",
+    "en": "Listowel - Milverton - Northern Perth County",
+    "fr": "Listowel - Milverton - comté de Perth nord"
+  },
+  "r1114": {
+    "bulletin": "FPTO11",
+    "en": "Waterloo - Wellington",
+    "fr": "Waterloo - Wellington"
+  },
+  "r1114a": {
+    "bulletin": "FPTO11",
+    "en": "Kitchener - Cambridge - Region of Waterloo",
+    "fr": "Kitchener - Cambridge - région de Waterloo"
+  },
+  "r1114b": {
+    "bulletin": "FPTO11",
+    "en": "Guelph - Erin - Southern Wellington County",
+    "fr": "Guelph - Erin - comté de Wellington sud"
+  },
+  "r1114c": {
+    "bulletin": "FPTO11",
+    "en": "Mount Forest - Arthur - Northern Wellington County",
+    "fr": "Mount Forest - Arthur - comté de Wellington nord"
+  },
+  "r1115": {
+    "bulletin": "FPTO11",
+    "en": "Dufferin - Innisfil",
+    "fr": "Dufferin - Innisfil"
+  },
+  "r1115a": {
+    "bulletin": "FPTO11",
+    "en": "Orangeville - Grand Valley - Southern Dufferin County",
+    "fr": "Orangeville - Grand Valley - comté de Dufferin sud"
+  },
+  "r1115b": {
+    "bulletin": "FPTO11",
+    "en": "Shelburne - Mansfield - Northern Dufferin County",
+    "fr": "Shelburne - Mansfield - comté de Dufferin nord"
+  },
+  "r1115c": {
+    "bulletin": "FPTO11",
+    "en": "Innisfil - New Tecumseth - Angus",
+    "fr": "Innisfil - New Tecumseth - Angus"
+  },
+  "r1116": {
+    "bulletin": "FPTO11",
+    "en": "Grey - Bruce",
+    "fr": "Grey - Bruce"
+  },
+  "r1116a": {
+    "bulletin": "FPTO11",
+    "en": "Saugeen Shores - Kincardine - Southern Bruce County",
+    "fr": "Saugeen Shores - Kincardine - comté de Bruce sud"
+  },
+  "r1116b": {
+    "bulletin": "FPTO11",
+    "en": "Bruce Peninsula - Sauble Beach - Tobermory",
+    "fr": "Péninsule de Bruce - Sauble Beach - Tobermory"
+  },
+  "r1116c": {
+    "bulletin": "FPTO11",
+    "en": "Hanover - Dundalk - Southern Grey County",
+    "fr": "Hanover - Dundalk - comté de Grey sud"
+  },
+  "r1116d": {
+    "bulletin": "FPTO11",
+    "en": "Owen Sound - Blue Mountains - Northern Grey County",
+    "fr": "Owen Sound - Blue Mountains - comté de Grey nord"
+  },
+  "r1117": {
+    "bulletin": "FPTO11",
+    "en": "Barrie - Orillia - Midland",
+    "fr": "Barrie - Orillia - Midland"
+  },
+  "r1117a": {
+    "bulletin": "FPTO11",
+    "en": "Barrie - Collingwood - Hillsdale",
+    "fr": "Barrie - Collingwood - Hillsdale"
+  },
+  "r1117b": {
+    "bulletin": "FPTO11",
+    "en": "Midland - Coldwater - Orr Lake",
+    "fr": "Midland - Coldwater - Orr Lake"
+  },
+  "r1117c": {
+    "bulletin": "FPTO11",
+    "en": "Orillia - Lagoon City - Washago",
+    "fr": "Orillia - Lagoon City - Washago"
+  },
+  "r1118": {
+    "bulletin": "FPTO11",
+    "en": "Belleville - Quinte - Northumberland",
+    "fr": "Belleville - Quinte - Northumberland"
+  },
+  "r1118a": {
+    "bulletin": "FPTO11",
+    "en": "Cobourg - Colborne - Western Northumberland County",
+    "fr": "Cobourg - Colborne - comté de Northumberland ouest"
+  },
+  "r1118b": {
+    "bulletin": "FPTO11",
+    "en": "Belleville - Quinte West - Eastern Northumberland County",
+    "fr": "Belleville - Quinte ouest - comté de Northumberland est"
+  },
+  "r1119": {
+    "bulletin": "FPTO11",
+    "en": "Kingston - Prince Edward",
+    "fr": "Kingston - Prince Edward"
+  },
+  "r1119a": {
+    "bulletin": "FPTO11",
+    "en": "Picton - Sandbanks Park",
+    "fr": "Picton - parc Sandbanks"
+  },
+  "r1119b": {
+    "bulletin": "FPTO11",
+    "en": "Napanee - Consecon",
+    "fr": "Napanee - Consecon"
+  },
+  "r1119c": {
+    "bulletin": "FPTO11",
+    "en": "Kingston - Odessa - Frontenac Islands",
+    "fr": "Kingston - Odessa - Îles Frontenac"
+  },
+  "r1120": {
+    "bulletin": "FPTO11",
+    "en": "Peterborough - Kawartha Lakes",
+    "fr": "Peterborough - Kawartha Lakes"
+  },
+  "r1120a": {
+    "bulletin": "FPTO11",
+    "en": "Lindsay - Southern Kawartha Lakes",
+    "fr": "Lindsay - Kawartha Lakes sud"
+  },
+  "r1120b": {
+    "bulletin": "FPTO11",
+    "en": "Fenelon Falls - Balsam Lake Park - Northern Kawartha Lakes",
+    "fr": "Fenelon Falls - parc Balsam Lake - Kawartha Lakes nord"
+  },
+  "r1120c": {
+    "bulletin": "FPTO11",
+    "en": "Peterborough City - Lakefield - Southern Peterborough County",
+    "fr": "ville de Peterborough - Lakefield - comté de Peterborough sud"
+  },
+  "r1120d": {
+    "bulletin": "FPTO11",
+    "en": "Apsley - Woodview - Northern Peterborough County",
+    "fr": "Apsley - Woodview - comté de Peterborough nord"
+  },
+  "r1121": {
+    "bulletin": "FPTO11",
+    "en": "Stirling - Tweed - South Frontenac",
+    "fr": "Stirling - Tweed - Frontenac sud"
   },
   "r1121a": {
+    "bulletin": "FPTO11",
     "en": "Stirling - Tweed - Madoc",
     "fr": "Stirling - Tweed - Madoc"
   },
   "r1121b": {
+    "bulletin": "FPTO11",
     "en": "Tamworth - Sydenham - South Frontenac",
     "fr": "Tamworth - Sydenham - Frontenac sud"
   },
-  "r1201": {
-    "en": "City of Thunder Bay",
-    "fr": "Ville de Thunder Bay"
-  },
-  "r1205b": {
-    "en": "Upsala - Raith",
-    "fr": "Upsala - Raith"
-  },
-  "r1206": {
-    "en": "Superior West",
-    "fr": "Supérieur ouest"
-  },
-  "r1202": {
-    "en": "Kenora - Nestor Falls",
-    "fr": "Kenora - Nestor Falls"
-  },
-  "r1204a": {
-    "en": "Fort Frances - Emo - Rainy River",
-    "fr": "Fort Frances - Emo - Rainy River"
-  },
-  "r1203": {
-    "en": "Dryden - Ignace",
-    "fr": "Dryden - Ignace"
-  },
-  "r1204b": {
-    "en": "Seine River Village - Mine Centre",
-    "fr": "Seine River Village - Mine Centre"
-  },
-  "r1205a": {
-    "en": "Atikokan - Shebandowan - Quetico Park",
-    "fr": "Atikokan - Shebandowan - parc Quetico"
-  },
-  "r1207": {
-    "en": "Red Lake - Ear Falls",
-    "fr": "Red Lake - Ear Falls"
-  },
-  "r1208": {
-    "en": "Sioux Lookout - Savant Lake",
-    "fr": "Sioux Lookout - Savant Lake"
-  },
-  "r1209": {
-    "en": "Lake Nipigon - Wabakimi",
-    "fr": "Lac Nipigon - Wabakimi"
-  },
-  "r1210": {
-    "en": "Geraldton - Manitouwadge - Hornepayne",
-    "fr": "Geraldton - Manitouwadge - Hornepayne"
-  },
-  "r1211": {
-    "en": "Nipigon - Marathon - Superior North",
-    "fr": "Nipigon - Marathon - Supérieur nord"
-  },
-  "r1212": {
-    "en": "Wawa - White River - Pukaskwa",
-    "fr": "Wawa - White River - Pukaskwa"
-  },
-  "r1213a": {
-    "en": "Sault Ste. Marie - St. Joseph Island",
-    "fr": "Sault Ste. Marie - île St-Joseph"
-  },
-  "r1213b": {
-    "en": "Searchmont - Montreal River Harbour - Batchawana Bay",
-    "fr": "Searchmont - Montreal River Harbour - Batchawana Bay"
-  },
-  "r1213c": {
-    "en": "Agawa - Lake Superior Park",
-    "fr": "Agawa - parc du Lac Supérieur"
-  },
-  "r1214": {
-    "en": "Kapuskasing - Hearst",
-    "fr": "Kapuskasing - Hearst"
-  },
-  "r1215": {
-    "en": "Timmins - Cochrane",
-    "fr": "Timmins - Cochrane"
-  },
-  "r1216": {
-    "en": "Greater Sudbury and vicinity",
-    "fr": "Grand Sudbury et les environs"
-  },
-  "r1220c": {
-    "en": "Espanola - Killarney",
-    "fr": "Espanola - Killarney"
-  },
-  "r1217": {
-    "en": "Chapleau - Gogama",
-    "fr": "Chapleau - Gogama"
-  },
-  "r1218": {
-    "en": "Kirkland Lake - New Liskeard - Temagami",
-    "fr": "Kirkland Lake - New Liskeard - Temagami"
-  },
-  "r1219": {
-    "en": "Elliot Lake - Ranger Lake",
-    "fr": "Elliot Lake - Ranger Lake"
-  },
-  "r1220b": {
-    "en": "Blind River - Thessalon",
-    "fr": "Blind River - Thessalon"
-  },
-  "r1220a": {
-    "en": "Manitoulin Island",
-    "fr": "île Manitoulin"
-  },
-  "r1221": {
-    "en": "North Bay - West Nipissing",
-    "fr": "North Bay - Nipissing ouest"
-  },
-  "r1205": {
-    "en": "Atikokan - Upsala - Quetico",
-    "fr": "Atikokan - Upsala - Quetico"
-  },
-  "r1214a": {
-    "en": "Kapuskasing - Hearst - Smooth Rock Falls",
-    "fr": "Kapuskasing - Hearst - Smooth Rock Falls"
-  },
-  "r1214b": {
-    "en": "Fraserdale - Pledger Lake",
-    "fr": "Fraserdale - Lac Pledger"
-  },
-  "r1215a": {
-    "en": "Timmins - Cochrane - Iroquois Falls",
-    "fr": "Timmins - Cochrane - Iroquois Falls"
-  },
-  "r1215b": {
-    "en": "Little Abitibi - Kesagami Lake",
-    "fr": "Little Abitibi - Lac Kesagami"
-  },
-  "r1217a": {
-    "en": "Chapleau - Missinaibi Lake",
-    "fr": "Chapleau - Lac Missinaibi"
-  },
-  "r1217b": {
-    "en": "Gogama - Foleyet",
-    "fr": "Gogama - Foleyet"
-  },
-  "r1204": {
-    "en": "Fort Frances - Rainy Lake",
-    "fr": "Fort Frances - lac à la Pluie"
-  },
-  "r1203a": {
-    "en": "Dryden - Vermilion Bay",
-    "fr": "Dryden - Vermilion Bay"
-  },
-  "r1203b": {
-    "en": "Ignace - English River",
-    "fr": "Ignace - English River"
-  },
-  "r1211a": {
-    "en": "Nipigon - Rossport",
-    "fr": "Nipigon - Rossport"
-  },
-  "r1211b": {
-    "en": "Marathon - Schreiber",
-    "fr": "Marathon - Schreiber"
-  },
-  "r1209a": {
-    "en": "Gull Bay - Black Sturgeon Lake",
-    "fr": "Gull Bay - Lac Black Sturgeon"
-  },
-  "r1209c": {
-    "en": "Armstrong - Auden - Wabakimi Park",
-    "fr": "Armstrong - Auden - parc Wabakimi"
-  },
-  "r1209b": {
-    "en": "Beardmore - Jellicoe - Macdiarmid",
-    "fr": "Beardmore - Jellicoe - Macdiarmid"
-  },
-  "r1210a": {
-    "en": "Geraldton - Longlac - Caramat",
-    "fr": "Geraldton - Longlac - Caramat"
-  },
-  "r1210c": {
-    "en": "Nakina - Aroland - Pagwa",
-    "fr": "Nakina - Aroland - Pagwa"
-  },
-  "r1210b": {
-    "en": "Manitouwadge - Hornepayne",
-    "fr": "Manitouwadge - Hornepayne"
-  },
-  "r1212b": {
-    "en": "White River - Dubreuilville",
-    "fr": "White River - Dubreuilville"
-  },
-  "r1212a": {
-    "en": "Wawa - Pukaskwa Park",
-    "fr": "Wawa - parc Pukaskwa"
-  },
-  "r1221a": {
-    "en": "North Bay - Powassan - Mattawa",
-    "fr": "North Bay - Powassan - Mattawa"
-  },
-  "r1221b": {
-    "en": "West Nipissing - French River",
-    "fr": "Nipissing ouest - French River"
-  },
-  "r1206a": {
-    "en": "Cloud Bay - Dorion",
-    "fr": "Cloud Bay - Dorion"
-  },
-  "r1202a": {
-    "en": "Kenora - Grassy Narrows - Whitedog",
-    "fr": "Kenora - Grassy Narrows - Whitedog"
-  },
-  "r1202b": {
-    "en": "Sioux Narrows - Nestor Falls - Morson",
-    "fr": "Sioux Narrows - Nestor Falls - Morson"
-  },
-  "r1206b": {
-    "en": "Kakabeka Falls - Whitefish Lake - Arrow Lake",
-    "fr": "Kakabeka Falls - Lac Whitefish - Lac Arrow"
-  },
-  "r1220": {
-    "en": "Manitoulin - Blind River - Killarney",
-    "fr": "Manitoulin - Blind River - Killarney"
-  },
-  "r1218a": {
-    "en": "Kirkland Lake - Englehart",
-    "fr": "Kirkland Lake - Englehart"
-  },
-  "r1218b": {
-    "en": "New Liskeard - Temagami",
-    "fr": "New Liskeard - Temagami"
-  },
-  "r1301": {
-    "en": "Sandy Lake - Pikangikum",
-    "fr": "Sandy Lake - Pikangikum"
-  },
-  "r1302": {
-    "en": "Pickle Lake - Wunnummin Lake",
-    "fr": "Pickle Lake - Wunnummin Lake"
-  },
-  "r1303": {
-    "en": "Big Trout Lake - Sachigo Lake",
-    "fr": "Big Trout Lake - Sachigo Lake"
-  },
-  "r1304": {
-    "en": "Fort Hope - Webequie",
-    "fr": "Fort Hope - Webequie"
-  },
-  "r1305a": {
-    "en": "Moosonee",
-    "fr": "Moosonee"
-  },
-  "r1305b": {
-    "en": "Fort Albany",
-    "fr": "Fort Albany"
-  },
-  "r1306": {
-    "en": "Attawapiskat",
-    "fr": "Attawapiskat"
-  },
-  "r1307": {
-    "en": "Fort Severn",
-    "fr": "Fort Severn"
-  },
-  "r1308": {
-    "en": "Peawanuck",
-    "fr": "Peawanuck"
-  },
-  "r1305": {
-    "en": "Moosonee - Fort Albany",
-    "fr": "Moosonee - Fort Albany"
-  },
-  "r1301a": {
-    "en": "Sandy Lake - Weagamow Lake - Deer Lake",
-    "fr": "Sandy Lake - Weagamow Lake - Deer Lake"
-  },
-  "r1301b": {
-    "en": "Pikangikum - Poplar Hill - MacDowell",
-    "fr": "Pikangikum - Poplar Hill - MacDowell"
-  },
-  "r1302a": {
-    "en": "Pickle Lake - Cat Lake",
-    "fr": "Pickle Lake - Cat Lake"
-  },
-  "r1302b": {
-    "en": "Summer Beaver - Wunnummin Lake - Kingfisher Lake",
-    "fr": "Summer Beaver - Wunnummin Lake - Kingfisher Lake"
-  },
-  "r1304a": {
-    "en": "Fort Hope - Lansdowne House - Ogoki",
-    "fr": "Fort Hope - Lansdowne House - Ogoki"
-  },
-  "r1304b": {
-    "en": "Webequie",
-    "fr": "Webequie"
-  },
-  "r1303a": {
-    "en": "Big Trout Lake - Kasabonika",
-    "fr": "Big Trout Lake - Kasabonika"
-  },
-  "r1303b": {
-    "en": "Sachigo Lake - Bearskin Lake",
-    "fr": "Sachigo Lake - Bearskin Lake"
-  },
-  "r71.1": {
-    "en": "Metro Montréal - Laval",
-    "fr": "Montréal métropolitain - Laval"
-  },
-  "r71.2": {
-    "en": "Vaudreuil - Soulanges - Huntingdon",
-    "fr": "Vaudreuil - Soulanges - Huntingdon"
-  },
-  "r71.3": {
-    "en": "Richelieu Valley - Saint-Hyacinthe",
-    "fr": "Vallée du Richelieu - Saint-Hyacinthe"
-  },
-  "r71.4": {
-    "en": "Lanaudière",
-    "fr": "Lanaudière"
-  },
-  "r71.5": {
-    "en": "Lachute - Saint-Jérôme",
-    "fr": "Lachute - Saint-Jérôme"
-  },
-  "r71.6": {
-    "en": "Laurentians",
-    "fr": "Laurentides"
-  },
-  "r71.7": {
-    "en": "Mont-Tremblant Park - Saint-Michel-des-Saints",
-    "fr": "Parc du Mont-Tremblant - Saint-Michel-des-Saints"
-  },
-  "r71.8": {
-    "en": "Mont-Laurier",
-    "fr": "Mont-Laurier"
-  },
-  "r71.9": {
-    "en": "La Vérendrye Wildlife Reserve",
-    "fr": "Réserve faunique La Vérendrye"
-  },
-  "r71.10": {
-    "en": "Upper Gatineau - Lièvre - Papineau",
-    "fr": "Haute-Gatineau - Lièvre - Papineau"
-  },
-  "r71.11": {
-    "en": "Pontiac",
-    "fr": "Pontiac"
-  },
-  "r71.13": {
-    "en": "Témiscamingue",
-    "fr": "Témiscamingue"
-  },
-  "r71.12": {
-    "en": "Abitibi",
-    "fr": "Abitibi"
-  },
-  "r71.14": {
-    "en": "Parent - Gouin Reservoir",
-    "fr": "Parent - réservoir Gouin"
-  },
-  "r71.15": {
-    "en": "Matagami",
-    "fr": "Matagami"
-  },
-  "r71.16": {
-    "en": "Waskaganish",
-    "fr": "Waskaganish"
-  },
-  "r73.1": {
-    "en": "Eastern Townships",
-    "fr": "Estrie"
-  },
-  "r73.2": {
-    "en": "Beauce",
-    "fr": "Beauce"
-  },
-  "r73.3": {
-    "en": "Drummondville - Bois-Francs",
-    "fr": "Drummondville - Bois-Francs"
-  },
-  "r73.4": {
-    "en": "Mauricie",
-    "fr": "Mauricie"
-  },
-  "r73.5": {
-    "en": "Québec",
-    "fr": "Québec"
-  },
-  "r73.6": {
-    "en": "Montmagny - L'Islet",
-    "fr": "Montmagny - L'Islet"
-  },
-  "r73.7": {
-    "en": "Charlevoix",
-    "fr": "Charlevoix"
-  },
-  "r73.8": {
-    "en": "La Tuque",
-    "fr": "La Tuque"
-  },
-  "r73.9": {
-    "en": "Laurentians Wildlife Reserve",
-    "fr": "Réserve faunique des Laurentides"
-  },
-  "r73.10": {
-    "en": "Saguenay",
-    "fr": "Saguenay"
-  },
-  "r73.11": {
-    "en": "Lac-Saint-Jean",
-    "fr": "Lac-Saint-Jean"
-  },
-  "r73.12": {
-    "en": "Chibougamau",
-    "fr": "Chibougamau"
-  },
-  "r74.1": {
-    "en": "Kamouraska - Rivière-du-Loup - Trois-Pistoles",
-    "fr": "Kamouraska - Rivière-du-Loup - Trois-Pistoles"
-  },
-  "r74.2": {
-    "en": "Témiscouata",
-    "fr": "Témiscouata"
-  },
-  "r74.3": {
-    "en": "Rimouski - Mont-Joli",
-    "fr": "Rimouski - Mont-Joli"
-  },
-  "r74.4": {
-    "en": "Amqui - Matapédia Valley",
-    "fr": "Amqui - vallée de la Matapédia"
-  },
-  "r74.5": {
-    "en": "Matane",
-    "fr": "Matane"
-  },
-  "r74.6": {
-    "en": "Sainte-Anne-des-Monts - Grande-Vallée",
-    "fr": "Sainte-Anne-des-Monts - Grande-Vallée"
-  },
-  "r74.7": {
-    "en": "Gaspésie National Park - Murdochville",
-    "fr": "Parc national de la Gaspésie - Murdochville"
-  },
-  "r74.8": {
-    "en": "Restigouche - Bonaventure",
-    "fr": "Restigouche - Bonaventure"
-  },
-  "r74.9": {
-    "en": "New Carlisle - Chandler",
-    "fr": "New Carlisle - Chandler"
-  },
-  "r74.10": {
-    "en": "Forillon National Park - Gaspé - Percé",
-    "fr": "Parc national de Forillon - Gaspé - Percé"
-  },
-  "r74.11": {
-    "en": "Manicouagan River",
-    "fr": "Rivière Manicouagan"
-  },
-  "r74.12": {
-    "en": "Les Escoumins - Forestville",
-    "fr": "Les Escoumins - Forestville"
-  },
-  "r74.13": {
-    "en": "Baie-Comeau",
-    "fr": "Baie-Comeau"
-  },
-  "r74.14": {
-    "en": "Sept-Îles - Port-Cartier",
-    "fr": "Sept-Îles - Port-Cartier"
-  },
-  "r74.15": {
-    "en": "Minganie",
-    "fr": "Minganie"
-  },
-  "r74.16": {
-    "en": "Anticosti",
-    "fr": "Anticosti"
-  },
-  "r74.17": {
-    "en": "Natashquan",
-    "fr": "Natashquan"
-  },
-  "r74.18": {
-    "en": "Chevery",
-    "fr": "Chevery"
-  },
-  "r74.19": {
-    "en": "Blanc-Sablon",
-    "fr": "Blanc-Sablon"
+  "r1122": {
+    "bulletin": "FPTO11",
+    "en": "Bancroft - Bon Echo Park",
+    "fr": "Bancroft - parc Bon Echo"
+  },
+  "r1122a": {
+    "bulletin": "FPTO11",
+    "en": "Kaladar - Bannockburn - Bon Echo Park",
+    "fr": "Kaladar - Bannockburn - parc Bon Echo"
+  },
+  "r1122b": {
+    "bulletin": "FPTO11",
+    "en": "Bancroft - Hastings Highlands - Denbigh",
+    "fr": "Bancroft - Hastings Highlands - Denbigh"
+  },
+  "r1123": {
+    "bulletin": "FPTO11",
+    "en": "Brockville - Leeds and Grenville",
+    "fr": "Brockville - Leeds et Grenville"
+  },
+  "r1123a": {
+    "bulletin": "FPTO11",
+    "en": "Gananoque - Mallorytown",
+    "fr": "Gananoque - Mallorytown"
+  },
+  "r1123b": {
+    "bulletin": "FPTO11",
+    "en": "Brockville - Prescott",
+    "fr": "Brockville - Prescott"
+  },
+  "r1123c": {
+    "bulletin": "FPTO11",
+    "en": "Westport - Charleston Lake",
+    "fr": "Westport - Lac Charleston"
+  },
+  "r1123d": {
+    "bulletin": "FPTO11",
+    "en": "Merrickville-Wolford - Kemptville",
+    "fr": "Merrickville-Wolford - Kemptville"
+  },
+  "r1124": {
+    "bulletin": "FPTO11",
+    "en": "City of Ottawa",
+    "fr": "Ville d'Ottawa"
   },
   "r1124a": {
+    "bulletin": "FPTO11",
     "en": "Ottawa North - Kanata - Orléans",
     "fr": "Ville d'Ottawa nord - Kanata - Orléans"
   },
   "r1124b": {
+    "bulletin": "FPTO11",
     "en": "Ottawa South - Richmond - Metcalfe",
     "fr": "Ville d'Ottawa sud - Richmond - Metcalfe"
+  },
+  "r1125": {
+    "bulletin": "FPTO11",
+    "en": "Gatineau",
+    "fr": "Gatineau"
+  },
+  "r1126": {
+    "bulletin": "FPTO11",
+    "en": "Prescott and Russell",
+    "fr": "Prescott et Russell"
+  },
+  "r1127": {
+    "bulletin": "FPTO11",
+    "en": "Cornwall - Morrisburg",
+    "fr": "Cornwall - Morrisburg"
+  },
+  "r1127a": {
+    "bulletin": "FPTO11",
+    "en": "Morrisburg - Long Sault",
+    "fr": "Morrisburg - Long Sault"
+  },
+  "r1127b": {
+    "bulletin": "FPTO11",
+    "en": "Cornwall - Lancaster",
+    "fr": "Cornwall - Lancaster"
+  },
+  "r1127c": {
+    "bulletin": "FPTO11",
+    "en": "Winchester - Newington",
+    "fr": "Winchester - Newington"
+  },
+  "r1127d": {
+    "bulletin": "FPTO11",
+    "en": "Maxville - Alexandria",
+    "fr": "Maxville - Alexandria"
+  },
+  "r1128": {
+    "bulletin": "FPTO11",
+    "en": "Smiths Falls - Lanark - Sharbot Lake",
+    "fr": "Smiths Falls - Lanark - Sharbot Lake"
+  },
+  "r1128a": {
+    "bulletin": "FPTO11",
+    "en": "Plevna - Sharbot Lake - Western Lanark County",
+    "fr": "Plevna - Sharbot Lake - comté de Lanark ouest"
+  },
+  "r1128b": {
+    "bulletin": "FPTO11",
+    "en": "Smiths Falls - Perth - Eastern Lanark County",
+    "fr": "Smiths Falls - Perth - comté de Lanark est"
+  },
+  "r1129": {
+    "bulletin": "FPTO11",
+    "en": "Parry Sound - Muskoka",
+    "fr": "Parry Sound - Muskoka"
+  },
+  "r1129a": {
+    "bulletin": "FPTO11",
+    "en": "Port Carling - Port Severn",
+    "fr": "Port Carling - Port Severn"
+  },
+  "r1129b": {
+    "bulletin": "FPTO11",
+    "en": "Bracebridge - Gravenhurst",
+    "fr": "Bracebridge - Gravenhurst"
+  },
+  "r1129c": {
+    "bulletin": "FPTO11",
+    "en": "Town of Parry Sound - Rosseau - Killbear Park",
+    "fr": "Ville de Parry Sound - Rosseau - parc Killbear"
+  },
+  "r1129d": {
+    "bulletin": "FPTO11",
+    "en": "Huntsville - Baysville",
+    "fr": "Huntsville - Baysville"
+  },
+  "r1130": {
+    "bulletin": "FPTO11",
+    "en": "Haliburton",
+    "fr": "Haliburton"
+  },
+  "r1130a": {
+    "bulletin": "FPTO11",
+    "en": "Haliburton - Minden - Southern Haliburton County",
+    "fr": "Haliburton - Minden - comté d'Haliburton sud"
+  },
+  "r1130b": {
+    "bulletin": "FPTO11",
+    "en": "Oxtongue Lake - Fort Irwin - Northern Haliburton County",
+    "fr": "Oxtongue Lake - Fort Irwin - comté d'Haliburton nord"
+  },
+  "r1131": {
+    "bulletin": "FPTO11",
+    "en": "Renfrew - Pembroke - Barry's Bay",
+    "fr": "Renfrew - Pembroke - Barry's Bay"
+  },
+  "r1131a": {
+    "bulletin": "FPTO11",
+    "en": "Barry's Bay - Killaloe",
+    "fr": "Barry's Bay - Killaloe"
+  },
+  "r1131b": {
+    "bulletin": "FPTO11",
+    "en": "Renfrew - Arnprior - Calabogie",
+    "fr": "Renfrew - Arnprior - Calabogie"
+  },
+  "r1131c": {
+    "bulletin": "FPTO11",
+    "en": "Petawawa - Pembroke - Cobden",
+    "fr": "Petawawa - Pembroke - Cobden"
+  },
+  "r1132": {
+    "bulletin": "FPTO11",
+    "en": "Algonquin",
+    "fr": "Algonquin"
+  },
+  "r1132a": {
+    "bulletin": "FPTO11",
+    "en": "Western Algonquin Park - Lake of Two Rivers",
+    "fr": "Parc Algonquin ouest - Lake of Two Rivers"
+  },
+  "r1132b": {
+    "bulletin": "FPTO11",
+    "en": "Deep River - Whitney - Eastern Algonquin Park",
+    "fr": "Deep River - Whitney - parc Algonquin est"
+  },
+  "r1133": {
+    "bulletin": "FPTO11",
+    "en": "Burk's Falls - Bayfield Inlet",
+    "fr": "Burk's Falls - Bayfield Inlet"
+  },
+  "r1133a": {
+    "bulletin": "FPTO11",
+    "en": "Bayfield Inlet - Dunchurch",
+    "fr": "Bayfield Inlet - Dunchurch"
+  },
+  "r1133b": {
+    "bulletin": "FPTO11",
+    "en": "South River - Burk's Falls",
+    "fr": "South River - Burk's Falls"
+  },
+  "r1201": {
+    "bulletin": "FPTO12",
+    "en": "City of Thunder Bay",
+    "fr": "Ville de Thunder Bay"
+  },
+  "r1202": {
+    "bulletin": "FPTO12",
+    "en": "Kenora - Nestor Falls",
+    "fr": "Kenora - Nestor Falls"
+  },
+  "r1202a": {
+    "bulletin": "FPTO12",
+    "en": "Kenora - Grassy Narrows - Whitedog",
+    "fr": "Kenora - Grassy Narrows - Whitedog"
+  },
+  "r1202b": {
+    "bulletin": "FPTO12",
+    "en": "Sioux Narrows - Nestor Falls - Morson",
+    "fr": "Sioux Narrows - Nestor Falls - Morson"
+  },
+  "r1203": {
+    "bulletin": "FPTO12",
+    "en": "Dryden - Ignace",
+    "fr": "Dryden - Ignace"
+  },
+  "r1203a": {
+    "bulletin": "FPTO12",
+    "en": "Dryden - Vermilion Bay",
+    "fr": "Dryden - Vermilion Bay"
+  },
+  "r1203b": {
+    "bulletin": "FPTO12",
+    "en": "Ignace - English River",
+    "fr": "Ignace - English River"
+  },
+  "r1204": {
+    "bulletin": "FPTO12",
+    "en": "Fort Frances - Rainy Lake",
+    "fr": "Fort Frances - lac à la Pluie"
+  },
+  "r1204a": {
+    "bulletin": "FPTO12",
+    "en": "Fort Frances - Emo - Rainy River",
+    "fr": "Fort Frances - Emo - Rainy River"
+  },
+  "r1204b": {
+    "bulletin": "FPTO12",
+    "en": "Seine River Village - Mine Centre",
+    "fr": "Seine River Village - Mine Centre"
+  },
+  "r1205": {
+    "bulletin": "FPTO12",
+    "en": "Atikokan - Upsala - Quetico",
+    "fr": "Atikokan - Upsala - Quetico"
+  },
+  "r1205a": {
+    "bulletin": "FPTO12",
+    "en": "Atikokan - Shebandowan - Quetico Park",
+    "fr": "Atikokan - Shebandowan - parc Quetico"
+  },
+  "r1205b": {
+    "bulletin": "FPTO12",
+    "en": "Upsala - Raith",
+    "fr": "Upsala - Raith"
+  },
+  "r1206": {
+    "bulletin": "FPTO12",
+    "en": "Superior West",
+    "fr": "Supérieur ouest"
+  },
+  "r1206a": {
+    "bulletin": "FPTO12",
+    "en": "Cloud Bay - Dorion",
+    "fr": "Cloud Bay - Dorion"
+  },
+  "r1206b": {
+    "bulletin": "FPTO12",
+    "en": "Kakabeka Falls - Whitefish Lake - Arrow Lake",
+    "fr": "Kakabeka Falls - Lac Whitefish - Lac Arrow"
+  },
+  "r1207": {
+    "bulletin": "FPTO12",
+    "en": "Red Lake - Ear Falls",
+    "fr": "Red Lake - Ear Falls"
+  },
+  "r1207a": {
+    "bulletin": "FPTO12",
+    "en": "Red Lake - Woodland Caribou Park",
+    "fr": "Red Lake - parc Woodland Caribou"
+  },
+  "r1207b": {
+    "bulletin": "FPTO12",
+    "en": "Ear Falls - Perrault Falls - Western Lac Seul",
+    "fr": "Ear Falls - Perrault Falls - Lac Seul ouest"
+  },
+  "r1208": {
+    "bulletin": "FPTO12",
+    "en": "Sioux Lookout - Savant Lake",
+    "fr": "Sioux Lookout - Savant Lake"
+  },
+  "r1208a": {
+    "bulletin": "FPTO12",
+    "en": "Sioux Lookout - Eastern Lac Seul",
+    "fr": "Sioux Lookout - Lac Seul est"
+  },
+  "r1208b": {
+    "bulletin": "FPTO12",
+    "en": "Savant Lake - Sturgeon Lake",
+    "fr": "Savant Lake - Lac Sturgeon"
+  },
+  "r1209": {
+    "bulletin": "FPTO12",
+    "en": "Lake Nipigon - Wabakimi",
+    "fr": "Lac Nipigon - Wabakimi"
+  },
+  "r1209a": {
+    "bulletin": "FPTO12",
+    "en": "Gull Bay - Black Sturgeon Lake",
+    "fr": "Gull Bay - Lac Black Sturgeon"
+  },
+  "r1209b": {
+    "bulletin": "FPTO12",
+    "en": "Beardmore - Jellicoe - Macdiarmid",
+    "fr": "Beardmore - Jellicoe - Macdiarmid"
+  },
+  "r1209c": {
+    "bulletin": "FPTO12",
+    "en": "Armstrong - Auden - Wabakimi Park",
+    "fr": "Armstrong - Auden - parc Wabakimi"
+  },
+  "r1210": {
+    "bulletin": "FPTO12",
+    "en": "Geraldton - Manitouwadge - Hornepayne",
+    "fr": "Geraldton - Manitouwadge - Hornepayne"
+  },
+  "r1210a": {
+    "bulletin": "FPTO12",
+    "en": "Geraldton - Longlac - Caramat",
+    "fr": "Geraldton - Longlac - Caramat"
+  },
+  "r1210b": {
+    "bulletin": "FPTO12",
+    "en": "Manitouwadge - Hornepayne",
+    "fr": "Manitouwadge - Hornepayne"
+  },
+  "r1210c": {
+    "bulletin": "FPTO12",
+    "en": "Nakina - Aroland - Pagwa",
+    "fr": "Nakina - Aroland - Pagwa"
+  },
+  "r1211": {
+    "bulletin": "FPTO12",
+    "en": "Nipigon - Marathon - Superior North",
+    "fr": "Nipigon - Marathon - Supérieur nord"
+  },
+  "r1211a": {
+    "bulletin": "FPTO12",
+    "en": "Nipigon - Rossport",
+    "fr": "Nipigon - Rossport"
+  },
+  "r1211b": {
+    "bulletin": "FPTO12",
+    "en": "Marathon - Schreiber",
+    "fr": "Marathon - Schreiber"
+  },
+  "r1212": {
+    "bulletin": "FPTO12",
+    "en": "Wawa - White River - Pukaskwa",
+    "fr": "Wawa - White River - Pukaskwa"
+  },
+  "r1212a": {
+    "bulletin": "FPTO12",
+    "en": "Wawa - Pukaskwa Park",
+    "fr": "Wawa - parc Pukaskwa"
+  },
+  "r1212b": {
+    "bulletin": "FPTO12",
+    "en": "White River - Dubreuilville",
+    "fr": "White River - Dubreuilville"
+  },
+  "r1213": {
+    "bulletin": "FPTO12",
+    "en": "Sault Ste. Marie - Superior East",
+    "fr": "Sault Ste. Marie - Supérieur est"
+  },
+  "r1213a": {
+    "bulletin": "FPTO12",
+    "en": "Sault Ste. Marie - St. Joseph Island",
+    "fr": "Sault Ste. Marie - île St-Joseph"
+  },
+  "r1213b": {
+    "bulletin": "FPTO12",
+    "en": "Searchmont - Montreal River Harbour - Batchawana Bay",
+    "fr": "Searchmont - Montreal River Harbour - Batchawana Bay"
+  },
+  "r1213c": {
+    "bulletin": "FPTO12",
+    "en": "Agawa - Lake Superior Park",
+    "fr": "Agawa - parc du Lac Supérieur"
+  },
+  "r1214": {
+    "bulletin": "FPTO12",
+    "en": "Kapuskasing - Hearst",
+    "fr": "Kapuskasing - Hearst"
+  },
+  "r1214a": {
+    "bulletin": "FPTO12",
+    "en": "Kapuskasing - Hearst - Smooth Rock Falls",
+    "fr": "Kapuskasing - Hearst - Smooth Rock Falls"
+  },
+  "r1214b": {
+    "bulletin": "FPTO12",
+    "en": "Fraserdale - Pledger Lake",
+    "fr": "Fraserdale - Lac Pledger"
+  },
+  "r1215": {
+    "bulletin": "FPTO12",
+    "en": "Timmins - Cochrane",
+    "fr": "Timmins - Cochrane"
+  },
+  "r1215a": {
+    "bulletin": "FPTO12",
+    "en": "Timmins - Cochrane - Iroquois Falls",
+    "fr": "Timmins - Cochrane - Iroquois Falls"
+  },
+  "r1215b": {
+    "bulletin": "FPTO12",
+    "en": "Little Abitibi - Kesagami Lake",
+    "fr": "Little Abitibi - Lac Kesagami"
+  },
+  "r1216": {
+    "bulletin": "FPTO12",
+    "en": "Greater Sudbury and vicinity",
+    "fr": "Grand Sudbury et les environs"
+  },
+  "r1217": {
+    "bulletin": "FPTO12",
+    "en": "Chapleau - Gogama",
+    "fr": "Chapleau - Gogama"
+  },
+  "r1217a": {
+    "bulletin": "FPTO12",
+    "en": "Chapleau - Missinaibi Lake",
+    "fr": "Chapleau - Lac Missinaibi"
+  },
+  "r1217b": {
+    "bulletin": "FPTO12",
+    "en": "Gogama - Foleyet",
+    "fr": "Gogama - Foleyet"
+  },
+  "r1218": {
+    "bulletin": "FPTO12",
+    "en": "Kirkland Lake - New Liskeard - Temagami",
+    "fr": "Kirkland Lake - New Liskeard - Temagami"
+  },
+  "r1218a": {
+    "bulletin": "FPTO12",
+    "en": "Kirkland Lake - Englehart",
+    "fr": "Kirkland Lake - Englehart"
+  },
+  "r1218b": {
+    "bulletin": "FPTO12",
+    "en": "New Liskeard - Temagami",
+    "fr": "New Liskeard - Temagami"
+  },
+  "r1219": {
+    "bulletin": "FPTO12",
+    "en": "Elliot Lake - Ranger Lake",
+    "fr": "Elliot Lake - Ranger Lake"
+  },
+  "r1220": {
+    "bulletin": "FPTO12",
+    "en": "Manitoulin - Blind River - Killarney",
+    "fr": "Manitoulin - Blind River - Killarney"
+  },
+  "r1220a": {
+    "bulletin": "FPTO12",
+    "en": "Manitoulin Island",
+    "fr": "île Manitoulin"
+  },
+  "r1220b": {
+    "bulletin": "FPTO12",
+    "en": "Blind River - Thessalon",
+    "fr": "Blind River - Thessalon"
+  },
+  "r1220c": {
+    "bulletin": "FPTO12",
+    "en": "Espanola - Killarney",
+    "fr": "Espanola - Killarney"
+  },
+  "r1221": {
+    "bulletin": "FPTO12",
+    "en": "North Bay - West Nipissing",
+    "fr": "North Bay - Nipissing ouest"
+  },
+  "r1221a": {
+    "bulletin": "FPTO12",
+    "en": "North Bay - Powassan - Mattawa",
+    "fr": "North Bay - Powassan - Mattawa"
+  },
+  "r1221b": {
+    "bulletin": "FPTO12",
+    "en": "West Nipissing - French River",
+    "fr": "Nipissing ouest - French River"
+  },
+  "r1301": {
+    "bulletin": "FPTO13",
+    "en": "Sandy Lake - Pikangikum",
+    "fr": "Sandy Lake - Pikangikum"
+  },
+  "r1301a": {
+    "bulletin": "FPTO13",
+    "en": "Sandy Lake - Weagamow Lake - Deer Lake",
+    "fr": "Sandy Lake - Weagamow Lake - Deer Lake"
+  },
+  "r1301b": {
+    "bulletin": "FPTO13",
+    "en": "Pikangikum - Poplar Hill - MacDowell",
+    "fr": "Pikangikum - Poplar Hill - MacDowell"
+  },
+  "r1302": {
+    "bulletin": "FPTO13",
+    "en": "Pickle Lake - Wunnummin Lake",
+    "fr": "Pickle Lake - Wunnummin Lake"
+  },
+  "r1302a": {
+    "bulletin": "FPTO13",
+    "en": "Pickle Lake - Cat Lake",
+    "fr": "Pickle Lake - Cat Lake"
+  },
+  "r1302b": {
+    "bulletin": "FPTO13",
+    "en": "Summer Beaver - Wunnummin Lake - Kingfisher Lake",
+    "fr": "Summer Beaver - Wunnummin Lake - Kingfisher Lake"
+  },
+  "r1303": {
+    "bulletin": "FPTO13",
+    "en": "Big Trout Lake - Sachigo Lake",
+    "fr": "Big Trout Lake - Sachigo Lake"
+  },
+  "r1303a": {
+    "bulletin": "FPTO13",
+    "en": "Big Trout Lake - Kasabonika",
+    "fr": "Big Trout Lake - Kasabonika"
+  },
+  "r1303b": {
+    "bulletin": "FPTO13",
+    "en": "Sachigo Lake - Bearskin Lake",
+    "fr": "Sachigo Lake - Bearskin Lake"
+  },
+  "r1304": {
+    "bulletin": "FPTO13",
+    "en": "Fort Hope - Webequie",
+    "fr": "Fort Hope - Webequie"
+  },
+  "r1304a": {
+    "bulletin": "FPTO13",
+    "en": "Fort Hope - Lansdowne House - Ogoki",
+    "fr": "Fort Hope - Lansdowne House - Ogoki"
+  },
+  "r1304b": {
+    "bulletin": "FPTO13",
+    "en": "Webequie",
+    "fr": "Webequie"
+  },
+  "r1305": {
+    "bulletin": "FPTO13",
+    "en": "Moosonee - Fort Albany",
+    "fr": "Moosonee - Fort Albany"
+  },
+  "r1305a": {
+    "bulletin": "FPTO13",
+    "en": "Moosonee",
+    "fr": "Moosonee"
+  },
+  "r1305b": {
+    "bulletin": "FPTO13",
+    "en": "Fort Albany",
+    "fr": "Fort Albany"
+  },
+  "r1306": {
+    "bulletin": "FPTO13",
+    "en": "Attawapiskat",
+    "fr": "Attawapiskat"
+  },
+  "r1307": {
+    "bulletin": "FPTO13",
+    "en": "Fort Severn",
+    "fr": "Fort Severn"
+  },
+  "r1308": {
+    "bulletin": "FPTO13",
+    "en": "Peawanuck",
+    "fr": "Peawanuck"
+  },
+  "r71.1": {
+    "bulletin": "FPCN71",
+    "en": "Metro Montréal - Laval",
+    "fr": "Montréal métropolitain - Laval"
+  },
+  "r71.10": {
+    "bulletin": "FPCN71",
+    "en": "Upper Gatineau - Lièvre - Papineau",
+    "fr": "Haute-Gatineau - Lièvre - Papineau"
+  },
+  "r71.11": {
+    "bulletin": "FPCN71",
+    "en": "Pontiac",
+    "fr": "Pontiac"
+  },
+  "r71.12": {
+    "bulletin": "FPCN71",
+    "en": "Abitibi",
+    "fr": "Abitibi"
+  },
+  "r71.13": {
+    "bulletin": "FPCN71",
+    "en": "Témiscamingue",
+    "fr": "Témiscamingue"
+  },
+  "r71.14": {
+    "bulletin": "FPCN71",
+    "en": "Parent - Gouin Reservoir",
+    "fr": "Parent - réservoir Gouin"
+  },
+  "r71.15": {
+    "bulletin": "FPCN71",
+    "en": "Matagami",
+    "fr": "Matagami"
+  },
+  "r71.16": {
+    "bulletin": "FPCN71",
+    "en": "Waskaganish",
+    "fr": "Waskaganish"
+  },
+  "r71.2": {
+    "bulletin": "FPCN71",
+    "en": "Vaudreuil - Soulanges - Huntingdon",
+    "fr": "Vaudreuil - Soulanges - Huntingdon"
+  },
+  "r71.3": {
+    "bulletin": "FPCN71",
+    "en": "Richelieu Valley - Saint-Hyacinthe",
+    "fr": "Vallée du Richelieu - Saint-Hyacinthe"
+  },
+  "r71.4": {
+    "bulletin": "FPCN71",
+    "en": "Lanaudière",
+    "fr": "Lanaudière"
+  },
+  "r71.5": {
+    "bulletin": "FPCN71",
+    "en": "Lachute - Saint-Jérôme",
+    "fr": "Lachute - Saint-Jérôme"
+  },
+  "r71.6": {
+    "bulletin": "FPCN71",
+    "en": "Laurentians",
+    "fr": "Laurentides"
+  },
+  "r71.7": {
+    "bulletin": "FPCN71",
+    "en": "Mont-Tremblant Park - Saint-Michel-des-Saints",
+    "fr": "Parc du Mont-Tremblant - Saint-Michel-des-Saints"
+  },
+  "r71.8": {
+    "bulletin": "FPCN71",
+    "en": "Mont-Laurier",
+    "fr": "Mont-Laurier"
+  },
+  "r71.9": {
+    "bulletin": "FPCN71",
+    "en": "La Vérendrye Wildlife Reserve",
+    "fr": "Réserve faunique La Vérendrye"
+  },
+  "r73.1": {
+    "bulletin": "FPCN73",
+    "en": "Eastern Townships",
+    "fr": "Estrie"
+  },
+  "r73.10": {
+    "bulletin": "FPCN73",
+    "en": "Saguenay",
+    "fr": "Saguenay"
+  },
+  "r73.11": {
+    "bulletin": "FPCN73",
+    "en": "Lac-Saint-Jean",
+    "fr": "Lac-Saint-Jean"
+  },
+  "r73.12": {
+    "bulletin": "FPCN73",
+    "en": "Chibougamau",
+    "fr": "Chibougamau"
+  },
+  "r73.2": {
+    "bulletin": "FPCN73",
+    "en": "Beauce",
+    "fr": "Beauce"
+  },
+  "r73.3": {
+    "bulletin": "FPCN73",
+    "en": "Drummondville - Bois-Francs",
+    "fr": "Drummondville - Bois-Francs"
+  },
+  "r73.4": {
+    "bulletin": "FPCN73",
+    "en": "Mauricie",
+    "fr": "Mauricie"
+  },
+  "r73.5": {
+    "bulletin": "FPCN73",
+    "en": "Québec",
+    "fr": "Québec"
+  },
+  "r73.6": {
+    "bulletin": "FPCN73",
+    "en": "Montmagny - L'Islet",
+    "fr": "Montmagny - L'Islet"
+  },
+  "r73.7": {
+    "bulletin": "FPCN73",
+    "en": "Charlevoix",
+    "fr": "Charlevoix"
+  },
+  "r73.8": {
+    "bulletin": "FPCN73",
+    "en": "La Tuque",
+    "fr": "La Tuque"
+  },
+  "r73.9": {
+    "bulletin": "FPCN73",
+    "en": "Laurentians Wildlife Reserve",
+    "fr": "Réserve faunique des Laurentides"
+  },
+  "r74.1": {
+    "bulletin": "FPCN74",
+    "en": "Kamouraska - Rivière-du-Loup - Trois-Pistoles",
+    "fr": "Kamouraska - Rivière-du-Loup - Trois-Pistoles"
+  },
+  "r74.10": {
+    "bulletin": "FPCN74",
+    "en": "Forillon National Park - Gaspé - Percé",
+    "fr": "Parc national de Forillon - Gaspé - Percé"
+  },
+  "r74.11": {
+    "bulletin": "FPCN74",
+    "en": "Manicouagan River",
+    "fr": "Rivière Manicouagan"
+  },
+  "r74.12": {
+    "bulletin": "FPCN74",
+    "en": "Les Escoumins - Forestville",
+    "fr": "Les Escoumins - Forestville"
+  },
+  "r74.13": {
+    "bulletin": "FPCN74",
+    "en": "Baie-Comeau",
+    "fr": "Baie-Comeau"
+  },
+  "r74.14": {
+    "bulletin": "FPCN74",
+    "en": "Sept-Îles - Port-Cartier",
+    "fr": "Sept-Îles - Port-Cartier"
+  },
+  "r74.15": {
+    "bulletin": "FPCN74",
+    "en": "Minganie",
+    "fr": "Minganie"
+  },
+  "r74.16": {
+    "bulletin": "FPCN74",
+    "en": "Anticosti",
+    "fr": "Anticosti"
+  },
+  "r74.17": {
+    "bulletin": "FPCN74",
+    "en": "Natashquan",
+    "fr": "Natashquan"
+  },
+  "r74.18": {
+    "bulletin": "FPCN74",
+    "en": "Chevery",
+    "fr": "Chevery"
+  },
+  "r74.19": {
+    "bulletin": "FPCN74",
+    "en": "Blanc-Sablon",
+    "fr": "Blanc-Sablon"
+  },
+  "r74.2": {
+    "bulletin": "FPCN74",
+    "en": "Témiscouata",
+    "fr": "Témiscouata"
+  },
+  "r74.3": {
+    "bulletin": "FPCN74",
+    "en": "Rimouski - Mont-Joli",
+    "fr": "Rimouski - Mont-Joli"
+  },
+  "r74.4": {
+    "bulletin": "FPCN74",
+    "en": "Amqui - Matapédia Valley",
+    "fr": "Amqui - vallée de la Matapédia"
+  },
+  "r74.5": {
+    "bulletin": "FPCN74",
+    "en": "Matane",
+    "fr": "Matane"
+  },
+  "r74.6": {
+    "bulletin": "FPCN74",
+    "en": "Sainte-Anne-des-Monts - Grande-Vallée",
+    "fr": "Sainte-Anne-des-Monts - Grande-Vallée"
+  },
+  "r74.7": {
+    "bulletin": "FPCN74",
+    "en": "Gaspésie National Park - Murdochville",
+    "fr": "Parc national de la Gaspésie - Murdochville"
+  },
+  "r74.8": {
+    "bulletin": "FPCN74",
+    "en": "Restigouche - Bonaventure",
+    "fr": "Restigouche - Bonaventure"
+  },
+  "r74.9": {
+    "bulletin": "FPCN74",
+    "en": "New Carlisle - Chandler",
+    "fr": "New Carlisle - Chandler"
   }
 }

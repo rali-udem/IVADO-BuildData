@@ -9,7 +9,7 @@ vocabulary_en=Counter()
 vocabulary_fr=Counter()
 
 def stat(json):
-    global nb,nbPara,fields,vocabulary_en,vocabularyu_fr
+    global nb,nbPara,fields,vocabulary_en,vocabulary_fr
     nb+=1
     for field in json:
         fields[field]+=1
