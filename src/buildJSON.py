@@ -9,11 +9,14 @@ baseDir=os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__))
 ## the key is the first line with the region name without the the ending "."
 def getBulletins(fileFN):
     bulletins={}
-    paras=open(fileFN,encoding="latin-1").read().split("\n\n")
-    for para in paras[1:-1]:
-        key=para[:para.index("\n")]
-        if key.endswith("."):key=key[:-1]
-        bulletins[key]=para
+    if os.path.exists(fileFN):
+        paras=open(fileFN,encoding="latin-1").read().split("\n\n")
+        for para in paras[1:-1]:
+            key=para[:para.index("\n")]
+            if key.endswith("."):key=key[:-1]
+            bulletins[key]=para
+    else:
+        print("Bulletins missing:",fileFN)
     # print(bulletins)
     return bulletins
 
@@ -89,3 +92,4 @@ def makeJSON(year,prov):
 
 if __name__ == '__main__':
     makeJSON("2018","ont")
+    makeJSON("2018","que")
