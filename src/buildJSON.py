@@ -25,7 +25,7 @@ def getBulletin(bulletins,name):
         print("no bulletin:",name)
         return "** no bulletin **"
 ## 
-codeRegions=json.load(open(baseDir+"/codesRegions.json","r",encoding="utf-8"))
+codeRegions=json.load(open(baseDir+"/codesRegions-2.json","r",encoding="utf-8"))
 
 def getRegionName(regionNo,lang):
     if regionNo not in codeRegions:
