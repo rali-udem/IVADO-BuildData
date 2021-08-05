@@ -71,6 +71,10 @@
     "en": "Newmarket - Georgina - Northern York Region",
     "fr": "Newmarket - Georgina - région de York nord"
   },
+  "r1112": {
+    "en": "York - Durham",
+    "fr": "York - Durham"
+  },
   "r1115": {
     "en": "Dufferin - Innisfil",
     "fr": "Dufferin - Innisfil"
@@ -250,6 +254,10 @@
   "r1115c": {
     "en": "Innisfil - New Tecumseth - Angus",
     "fr": "Innisfil - New Tecumseth - Angus"
+  },
+  "r1116": {
+    "en": "Grey - Bruce",
+    "fr": "Grey - Bruce"
   },
   "r1117a": {
     "en": "Barrie - Collingwood - Hillsdale",
