@@ -1,11 +1,9 @@
 import json
 import os
 
-from setuptools.command.register import register
-
 from ppJson import ppJson
 import sys
-from buildJSON import parseMeteocode, combineBulletin, save_bulletin_texts
+from buildJSON import parseMeteocode, save_bulletin_texts
 
 
 def read_bulletins(code_dir, texte_dir, year: int, output_dir: str):
@@ -33,6 +31,7 @@ def main():
     output_dir = sys.argv[2]
 
     read_bulletins(config['2018_meteocode'], config['2018_texte'], 2018, output_dir)
+    read_bulletins(config['2019_meteocode'], config['2019_texte'], 2018, output_dir)
 
 
 if __name__ == '__main__':
