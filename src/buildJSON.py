@@ -36,7 +36,7 @@ def getRegionName(regionNo,lang):
 
 ## from obj stored on file jsonFN
 ##   create a directory of separate bulletin json file with the corresponding English and French bulletins
-ignoredKeys=set(["pol_NO","pol_NO2","pol_03","pol_PM10","pol_PM25","pol_SO2"])
+ignoredKeys=set(["pol_NO","pol_NO2","pol_O3","pol_PM10","pol_PM25","pol_SO2"])
 def combineBulletin(jsonFN,obj):
     m = re.match(r"(?P<baseDir>.*)JSON(?P<yearProv>.*?)(?P<fileName>TRANSMIT.*).json",jsonFN)
     if m==None:
