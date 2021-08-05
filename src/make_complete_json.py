@@ -31,7 +31,7 @@ def main():
     output_dir = sys.argv[2]
 
     read_bulletins(config['2018_meteocode'], config['2018_texte'], 2018, output_dir)
-    read_bulletins(config['2019_meteocode'], config['2019_texte'], 2018, output_dir)
+    read_bulletins(config['2019_meteocode'], config['2019_texte'], 2019, output_dir)
 
 
 if __name__ == '__main__':
