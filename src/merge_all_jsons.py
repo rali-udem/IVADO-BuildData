@@ -1,10 +1,7 @@
 import hashlib
 import os
-import pickle
 import sys
 import json
-
-import orjson
 
 
 def get_id(cur_region: dict):
@@ -37,26 +34,35 @@ def get_slice(id: str):
 
 
 def main():
-    if len(sys.argv) != 3:
-        print("Usage: prog output_dir output_file.pkl", file=sys.stderr)
+    if len(sys.argv) != 4:
+        print("Usage: prog output_dir output_file.jsonl partition_file.json", file=sys.stderr)
         sys.exit(1)
 
     input_dirname = sys.argv[1]
     output_filename = sys.argv[2]
-    all_data = {'bulletins': {}, 'partition': {'dev': [], 'train': [], 'test': []}}
+    partition_filename = sys.argv[3]
     nb_bulletins_found = 0
+    found_ids = set()
+    partition = {'train': [], 'dev': [], 'test': []}
+
+    output_file = open(output_filename, 'wt', encoding='utf-8')
 
     for dirpath, dirs, files in os.walk(input_dirname):
         region_files = [os.path.join(dirpath, f) for f in files if f.startswith("r") and f.endswith(".json")]
         for cur_filename in region_files:
             cur_region: dict = json.load(open(cur_filename, 'rt'))
-            cur_id = get_id(cur_region)
+            cur_id: str = get_id(cur_region)
+            cur_region['id'] = cur_id
+
             cur_slice = get_slice(cur_id)
 
-            assert cur_id not in all_data['bulletins'], f"Duplicate id {cur_id}!!"
+            assert cur_id not in found_ids, f"Duplicate id {cur_id}!!"
+            found_ids.add(cur_id)
 
-            all_data['bulletins'][cur_id] = cur_region
-            all_data['partition'][cur_slice].append(cur_id)
+            partition[cur_slice].append(cur_id)
+
+            # write region file
+            output_file.write(json.dumps(cur_region) + '\n')
 
             nb_bulletins_found += 1
             if nb_bulletins_found % 100 == 0:
@@ -64,16 +70,9 @@ def main():
             if nb_bulletins_found % 2000 == 0:
                 print('', file=sys.stderr, flush=True)
 
-    print(f"\n\nPartition is train: {len(all_data['partition']['train']) / len(all_data['bulletins']):.2f},"
-          f" dev: {len(all_data['partition']['dev']) / len(all_data['bulletins']):.2f}"
-          f" test: {len(all_data['partition']['test']) / len(all_data['bulletins']):.2f}", file=sys.stderr, flush=True)
+    output_file.close()
 
-    # print(f'\n\nSaving {nb_bulletins_found} bulletins in {output_filename}', file=sys.stderr)
-    # json.dump(all_data, open(output_filename, 'wt'))
-    # print("Done.", file=sys.stderr)
-    print(f'\n\nSaving {nb_bulletins_found} bulletins in {output_filename}', file=sys.stderr)
-    pickle.dump(all_data, open(output_filename, 'wb'))
-    print("Done.", file=sys.stderr)
+    json.dump(partition, open(partition_filename, 'wt'))
 
 
 if __name__ == '__main__':
