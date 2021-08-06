@@ -8,7 +8,7 @@ def load_regions(fin, regions):
     lines = [x.strip() for x in fin.readlines()]
     for l in lines:
         parts = l.split('|')
-        assert len(parts) == 5, "Invalid line "  + l
+        assert len(parts) == 5, "Invalid line " + l
         regions[parts[1]] = {"en": parts[4], "fr": parts[3]}
 
 

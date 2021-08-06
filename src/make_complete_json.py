@@ -11,7 +11,7 @@ def read_bulletins(code_dir, texte_dir, year: int, output_dir: str):
         prov_code_dir = os.path.join(code_dir, prov)
         _, _, filenames = next(os.walk(prov_code_dir), (None, None, []))
         for cur_filename in filenames:
-            print(f"Processing {cur_filename}...", file=sys.stderr)
+            print(f"Processing {prov} {str(year)} {cur_filename}...", file=sys.stderr)
             cur_code = parseMeteocode(os.path.join(prov_code_dir, cur_filename))
             json_filename = os.path.join(output_dir, f'{str(year)}-{prov}-{cur_filename}.json')
             if not os.path.exists(json_filename):
@@ -30,6 +30,7 @@ def main():
     config = json.load(open(sys.argv[1]))
     output_dir = sys.argv[2]
 
+    # read_bulletins(r'c:\temp\test\code', r'c:\temp\test\text', 2019, r'c:\temp\test\output')
     read_bulletins(config['2018_meteocode'], config['2018_texte'], 2018, output_dir)
     read_bulletins(config['2019_meteocode'], config['2019_texte'], 2019, output_dir)
 
