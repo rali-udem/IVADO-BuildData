@@ -40,7 +40,7 @@ Historical data (i.e start and end times before issue time) is indicated with a 
                "tropical storm" |  "tornado" | "waterspout" | "heat wave" | "cold wave" | "vents_marine"| 
                "Suetes winds" | "storm" | "strong winds" | "Wreckhouse winds"
 
-## `ciel` : loud cover (sect 3.4.6, p. 28)
+## `ciel` : cloud cover (sect 3.4.6, p. 28)
     ciel: start end neb-start neb-end {ceiling-height}
         neb-start,neb-end : cloud cover in tenths of cloud-cover at start and end time
         ceiling-height` : 1..10 (1 being low and 10 high)
