@@ -24,9 +24,15 @@ def getBulletins(fileFN):
 def getBulletin(bulletins,name):
     if name in bulletins:
         return bulletins[name]
-    else:
-        print("no bulletin:",name)
-        return "** no bulletin **"
+
+    # try and patch name
+    capitalized_name = name[0].upper() + name[1:]
+    if capitalized_name in bulletins:
+        print(f"Patched {name} -> {capitalized_name}", file=sys.stderr)
+        return bulletins[capitalized_name]
+
+    print("no bulletin:",name)
+    return "** no bulletin **"
 ## 
 codeRegions=json.load(open(baseDir+"/codesRegions-2.json","r",encoding="utf-8"))
 
