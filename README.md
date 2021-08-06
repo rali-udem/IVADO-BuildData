@@ -36,7 +36,6 @@ where
 - JSON/201[89]/que/* : directory with region names
 - JSON/201[89]/que/*.json : created json files 
 
-
-Guy Lapalme (lapalme@iro.umontreal.ca)
-Fabrizio Gotti (gottif@iro.umontreal.ca)
+Guy Lapalme (lapalme@iro.umontreal.ca)  
+Fabrizio Gotti (gottif@iro.umontreal.ca)  
 August 2021
