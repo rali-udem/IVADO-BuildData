@@ -97,5 +97,5 @@ def makeJSON(year,prov):
             print("added",jsonFN)
 
 if __name__ == '__main__':
-    makeJSON("2018","ont")
+    # makeJSON("2018","ont")
     makeJSON("2018","que")

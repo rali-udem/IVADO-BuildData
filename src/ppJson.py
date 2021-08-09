@@ -69,7 +69,7 @@ if __name__ == '__main__':
         while True:
             try:
                 obj=json.loads(line)
-                ppJson(sys.stdout,obj)
+                ppJson(sys.stdout,obj,0,False)
                 break
             except:
                 line += next(sys.stdin)

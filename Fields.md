@@ -2,8 +2,9 @@
 Information taken from *Météocode Coding standard Version 3.9.1* (Meteocode38.doc)
 We only give frequently occurring values, refer to the document for  undocumented values. The original being in French, we give equivalent English terms after `=>`.
 
-Most fields start with `start` and `end` which are given in number of hours since the issue time of the report.  
-Historical data (i.e start and end times before issue time) is indicated with a negative number
+**Important**:
+Most fields start with `start` and `end` which are given in *hours*. 
+An *hour* expressed in Universal Coordinated Time (UTC). The hours are accumulated from “0” hour corresponding to 00Z of day 1 (UTC date) of the forecast; for example day 1 of the time zone EST is: [5..29[, day 2: [29..53[, day 3: [53..77[ ...]. Negative hours refer to historical data.
 
 ## `accum` : precipitation accumulation (sect 3.4.4, p. 22)
     accum: start end type code certainty value-start value-end?
@@ -59,8 +60,10 @@ Historical data (i.e start and end times before issue time) is indicated with a 
     indice_uv : start end value
         value : float with one decimal
 
-##  `niveau_neige` : snow level (???)
-    niveau_neige : start end code number
+##  `niveau_neige` : 
+    niveau_neige : start end code value
+        code   : type of the value
+        value  : number of meters (rounded at 100) in altitude at which the precipitations start to solidify
 
 ## `pcpn` : precipitations (sect 3.4.18, p 37)
     pcpn : start end certainty code type intensity frequency exception?
