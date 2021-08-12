@@ -62,7 +62,7 @@ def main():
             partition[cur_slice].append(cur_id)
 
             # write region file
-            output_file.write(json.dumps(cur_region) + '\n')
+            output_file.write(json.dumps(cur_region, ensure_ascii=False) + '\n')
 
             nb_bulletins_found += 1
             if nb_bulletins_found % 100 == 0:
