@@ -8,7 +8,7 @@ def get_id(cur_region: dict):
     """
     Finds id of type fpto-11-01-10-2030Z from bulletin info.
     :param cur_region: The dict for the current region bulleting.
-    :return: A string.
+    :return: A string (the id).
     """
     station = cur_region['header'][0][0].lower()
     year = int(cur_region['header'][0][4])
@@ -62,7 +62,7 @@ def main():
             partition[cur_slice].append(cur_id)
 
             # write region file
-            output_file.write(json.dumps(cur_region) + '\n')
+            output_file.write(json.dumps(cur_region, ensure_ascii=False) + '\n')
 
             nb_bulletins_found += 1
             if nb_bulletins_found % 100 == 0:
