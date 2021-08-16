@@ -329,7 +329,7 @@ def temperatures(data,lang):
     def jsrTemp(val):
         if val==0: return N("zero") if lang=="en" else N("zéro")
         if val<0 : return AdvP(Adv("minus" if lang=="en" else Adv("moins")),NO(abs(val)))
-        if val<=5 : return AP(A("plus"), NO(val))
+        if val<=5 : return AP(A("plus"), NO(val)) if lang=="en" else AdvP(Adv("plus"),NO(val))
         return NO(val)
     
     if showData:print(data)
@@ -343,7 +343,7 @@ def temperatures(data,lang):
         if random.random()>0.5: 
             return S(NP(N("low" if lang=="en" else "minimum"),jsrTemp(min(values))))
         else:
-            return S(NP(Adv("high" if lang=="en" else "maximum"),jsrTemp(max(values))))
+            return S(NP(Adv("high") if lang=="en" else N("maximum")),jsrTemp(max(values)))
     if iMin>=0 and iMax>=0:
         return S(N("temperature" if lang=="en" else "température"),
                  VP(V("be" if lang=="en" else "être").t("f"),
