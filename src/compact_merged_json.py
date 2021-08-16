@@ -58,11 +58,12 @@ def main_compact():
 
 def main_partition():
     if len(sys.argv) != 4:
-        print("Usage: prog [partition] input_file.jsonl output_file.jsonl", file=sys.stderr)
+        print("Usage: prog [partition] input_file.jsonl output_file_root", file=sys.stderr)
+        print("Compacts, then write partition at output_file_root_{dev,test,train}.jsonl")
         sys.exit(1)
 
     input_filename = sys.argv[2]
-    output_json_filename = sys.argv[3]
+    output_json_filename_root = sys.argv[3]
 
     partition = {'train': [], 'dev': [], 'test': []}
 
@@ -76,8 +77,8 @@ def main_partition():
     print(f"Partition is {len(partition['dev'])} dev, {len(partition['test'])} test, {len(partition['train'])} train, "
           f"in that order")
 
-    with open(output_json_filename, 'wt', encoding='utf-8') as fout:
-        for slice_name in ['dev', 'test', 'train']:
+    for slice_name in ['dev', 'test', 'train']:
+        with open(output_json_filename_root + '_' + slice_name + '.jsonl', 'wt', encoding='utf-8') as fout:
             for bulletin in partition[slice_name]:
                 fout.write(json.dumps(bulletin, ensure_ascii=False) + '\n')
 
