@@ -38,7 +38,7 @@ def ppJson(file,obj,level=0,sortkeys=True):
         out(file,"{")
         n=len(obj)
         i=1
-        keys=obj.keys()
+        keys=list(obj.keys())
         if sortkeys: keys.sort(key=remove_accents)
         for key in keys:
             if i>1 : out(file,"\n"+(level+1)*" ")

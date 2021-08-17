@@ -6,6 +6,7 @@ from datetime import timedelta,datetime
 from weatherData import WeatherData
 
 import json, textwrap, re, sys, random, locale
+from ppJson import ppJson
 
 showData=True
 
@@ -13,7 +14,8 @@ showData=True
 def fmt(jsrExp,lang):
     exp=jsrExp.lang(lang).pp() # pretty-print the json format
     # print(exp)
-    return textwrap.fill(jsRealB(exp),width=70);
+    # return textwrap.fill(,width=70);
+    return jsRealB(exp)
 
 ### time generation
 def jsrTime(dt,lang):
@@ -432,7 +434,8 @@ def forecast(fc,lang,title,beginHour,endHour,text):
         uv_index      (WeatherData("indice_uv-fc['indice_uv']",["value"],
                                    fc["indice_uv"],beginHour,endHour,beginTime,tzHours,text),lang)
     ]
-    return textwrap.fill(title+".."+" ".join([fmt(s,lang) for s in res if s!=None]),width=70)
+    # return textwrap.fill(title+".."+" ".join([fmt(s,lang) for s in res if s!=None]),width=70)
+    return [fmt(s,lang) for s in res if s!=None]
 
 ## how many hours to the end of today, tonight and tomorrow
 hoursToday=19
@@ -451,7 +454,7 @@ DST2019=datetime(2019,3,10), datetime(2019,11,3)
 
 def getTimeInfo(fc,lang):
     global tzHours,tzShift,tzS
-    header=fc["header"][0]
+    header=fc["header"]
     if len(header)==15:
         [bulletinName,emitter,tz,bType,issueYear,issueMonth,issueDay,issueTime,_1,
           _2,nextYear,nextMonth,nextDay,nextTime,_3]=header
@@ -474,32 +477,53 @@ def getTimeInfo(fc,lang):
 
 def bulletin(fc,lang):
     (bulletinName,beginTime,nextTime)=getTimeInfo(fc,lang)
-    texts=[t.strip().replace('\n'," ") for t in re.split(r"[A-Z][a-z]+\.\.",fc[lang])]
+    texts=[t.strip().replace('\n'," ") for t in re.split(r"[A-Z][a-z]+\.\.",fc[lang]["orig"])]
     res=header(lang,bulletinName,beginTime,nextTime)
     res.extend(fc["names-"+lang])
     res[-1]=res[-1]+"."  # add full stop at the end of regions
     para=forecast(fc,lang,"Today",0+tzHours,hoursToday+tzHours,texts[1])
     if showData:print("==>",para)
     res.append(para)
-    para=forecast(fc,lang,"Tonight",hoursToday+tzHours,hoursTonight+tzHours,texts[1])
+    para=forecast(fc,lang,"Tonight",hoursToday+tzHours,hoursTonight+tzHours,texts[2])
     if showData:print("==>",para)
     res.append(para)
     para=forecast(fc,lang,fmt(jsrDay(beginTime+timedelta(days=1)),lang),
-                  hoursTonight+tzHours,hoursTomorrow+tzHours,texts[1])
+                  hoursTonight+tzHours,hoursTomorrow+tzHours,texts[3])
     if showData:print("==>",para)
     res.append(para)
     print("\n** %s\n"%("generated" if lang=="en" else "généré"),"\n".join(res))
-    print("\n** original\n",fc[lang])
-    
+    print("\n** original\n",fc[lang]["orig"])
 
+def symbolicNLG(fc,lang):
+    (bulletinName,beginTime,nextTime)=getTimeInfo(fc,lang)
+    res={"en":{"tok":{"today":[],"tonight":[],"tomorrow":[],"tomorrow_night":[]}}}
+    tok=res["en"]["tok"]
+    tok["today"]=forecast(fc,lang,"",0+tzHours,hoursToday+tzHours,"")
+    tok["tonight"]=forecast(fc,lang,"",hoursToday+tzHours,hoursTonight+tzHours,"")
+    tok["tomorrow"]=forecast(fc,lang,"",hoursTonight+tzHours,hoursTomorrow+tzHours,"")
+    return res
+        
 def bulletins(jsonFN):
     fc=json.load(open(jsonFN,"r",encoding="utf-8"))
     print("\n *** Generating from:",jsonFN)
     bulletin(fc,"en")
     bulletin(fc,"fr")
 
+def processCorpus(jsonl):
+    print("\n *** Processing ",jsonl)
+    for line in open(jsonl,"r",encoding="utf-8"):
+        fc=json.loads(line)
+        out=symbolicNLG(fc,"en")
+        print(out)
+        ppJson(sys.stdout,out,0,False)
+        break
+        bulletin(fc,"fr")
+        
+    
 ### make sure that a jsRealB server is started in a terminal, using the following call
 ##    node ../jsRealB/dist/jsRealB-server-dme.js ../data/weatherLexicon.js
 
-bulletins("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/bulletin1.json")
-bulletins("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/2018/ont/FPTO11.01.01.1000Z/r1102a.json")
+# bulletins("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/bulletin1.json")
+# bulletins("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/2018/ont/FPTO11.01.01.1000Z/r1102a.json")
+
+processCorpus("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/test-10.jsonl")
