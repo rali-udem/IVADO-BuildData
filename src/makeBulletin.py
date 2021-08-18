@@ -227,7 +227,6 @@ def precipitations(data,lang):
     maxCertainty=max(certainty)
     if maxCertainty >= 30:
         iMax=certainty.index(maxCertainty)
-        print(iMax,data["type"])
         pType=data["type"][iMax]
         if pType==None:pType="pluie"
         jsrPType=precipitationTypes[pType][lang]
@@ -437,10 +436,11 @@ def forecast(fc,lang,title,beginHour,endHour,text):
     # return textwrap.fill(title+".."+" ".join([fmt(s,lang) for s in res if s!=None]),width=70)
     return [fmt(s,lang) for s in res if s!=None]
 
-## how many hours to the end of today, tonight and tomorrow
-hoursToday=19
-hoursTonight=31
-hoursTomorrow=49
+## start and end hour of each "period" of a bulletin
+hours ={"today":(5,19),
+        "tonight":(17,31),
+        "tomorrow":(30,49),
+        "tomorrow_night":(47,60)}
 
 tz    = None
 tzS   = None
@@ -475,49 +475,64 @@ def getTimeInfo(fc,lang):
         print("bad header",header)
     return (bulletinName,beginTime,nextTime)
 
+def getSents(fc,lang):
+    (bulletinName,beginTime,nextTime)=getTimeInfo(fc,lang)
+    res = {}
+    periods = fc[lang].keys()
+    for period in fc[lang]["tok"].keys():
+        (startHour,endHour)=hours[period]
+        res[period]=forecast(fc,lang,period,startHour+tzHours,endHour+tzHours,"")
+        if showData:print("**> "+" ".join(res[period]))
+    return res
+
+titles={
+    "today":   {"en":"Today",   "fr":"Aujourd'hui"},
+    "tonight": {"en":"Tonight", "fr":"Ce soir et cette nuit"},
+    "tomorrow":{"en":"Tomorrow","fr":"Demain"},
+    "tomorrow_night":{"en":"Tomorrow night","fr":"Demain soir"},
+}
+        
 def bulletin(fc,lang):
     (bulletinName,beginTime,nextTime)=getTimeInfo(fc,lang)
-    texts=[t.strip().replace('\n'," ") for t in re.split(r"[A-Z][a-z]+\.\.",fc[lang]["orig"])]
+    # texts=[t.strip().replace('\n'," ") for t in re.split(r"[A-Z][a-z]+\.\.",fc[lang]["orig"])]
     res=header(lang,bulletinName,beginTime,nextTime)
     res.extend(fc["names-"+lang])
     res[-1]=res[-1]+"."  # add full stop at the end of regions
-    para=forecast(fc,lang,"Today",0+tzHours,hoursToday+tzHours,texts[1])
-    if showData:print("==>",para)
-    res.append(para)
-    para=forecast(fc,lang,"Tonight",hoursToday+tzHours,hoursTonight+tzHours,texts[2])
-    if showData:print("==>",para)
-    res.append(para)
-    para=forecast(fc,lang,fmt(jsrDay(beginTime+timedelta(days=1)),lang),
-                  hoursTonight+tzHours,hoursTomorrow+tzHours,texts[3])
-    if showData:print("==>",para)
-    res.append(para)
+    # para=forecast(fc,lang,"Today",0+tzHours,hoursToday+tzHours,texts[1])
+    # if showData:print("==>",para)
+    # res.append(para)
+    # para=forecast(fc,lang,"Tonight",hoursToday+tzHours,hoursTonight+tzHours,texts[2])
+    # if showData:print("==>",para)
+    # res.append(para)
+    # para=forecast(fc,lang,fmt(jsrDay(beginTime+timedelta(days=1)),lang),
+    #               hoursTonight+tzHours,hoursTomorrow+tzHours,texts[3])
+    # if showData:print("==>",para)
+    # res.append(para)
+    sents=getSents(fc,lang)
+    for period in sents:
+        title=fmt(jsrDay(beginTime+timedelta(days=1)),lang) if period.startswith("tomorrow") else titles[period][lang]
+        res.append(textwrap.fill(title+".."+" ".join(sents[period])))
     print("\n** %s\n"%("generated" if lang=="en" else "généré"),"\n".join(res))
     print("\n** original\n",fc[lang]["orig"])
 
-def symbolicNLG(fc,lang):
-    (bulletinName,beginTime,nextTime)=getTimeInfo(fc,lang)
-    res={"en":{"tok":{"today":[],"tonight":[],"tomorrow":[],"tomorrow_night":[]}}}
-    tok=res["en"]["tok"]
-    tok["today"]=forecast(fc,lang,"",0+tzHours,hoursToday+tzHours,"")
-    tok["tonight"]=forecast(fc,lang,"",hoursToday+tzHours,hoursTonight+tzHours,"")
-    tok["tomorrow"]=forecast(fc,lang,"",hoursTonight+tzHours,hoursTomorrow+tzHours,"")
-    return res
-        
-def bulletins(jsonFN):
-    fc=json.load(open(jsonFN,"r",encoding="utf-8"))
-    print("\n *** Generating from:",jsonFN)
-    bulletin(fc,"en")
-    bulletin(fc,"fr")
-
-def processCorpus(jsonl):
-    print("\n *** Processing ",jsonl)
-    for line in open(jsonl,"r",encoding="utf-8"):
+def bulletins(jsonlFN):
+    print("\n *** Generating from:",jsonlFN)
+    for line in open(jsonlFN,"r",encoding="utf-8"):
         fc=json.loads(line)
-        out=symbolicNLG(fc,"en")
-        print(out)
-        ppJson(sys.stdout,out,0,False)
-        break
+        bulletin(fc,"en")
         bulletin(fc,"fr")
+
+def processCorpus(inJsonl,outJsonl):
+    print("\n *** Processing ",inJsonl)
+    outJson=open(outJsonl,"w",encoding="utf=8")
+    for line in open(inJsonl,"r",encoding="utf-8"):
+        fc=json.loads(line)
+        res={"id":fc["id"]}
+        res["en"]=symbolicNLG(fc,"en")
+        res["fr"]=symbolicNLG(fc,"fr")
+        outJson.write(json.dumps(res,indent=None,ensure_ascii=False))
+        outJson.write("\n")
+        
         
     
 ### make sure that a jsRealB server is started in a terminal, using the following call
@@ -526,4 +541,7 @@ def processCorpus(jsonl):
 # bulletins("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/bulletin1.json")
 # bulletins("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/2018/ont/FPTO11.01.01.1000Z/r1102a.json")
 
-processCorpus("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/test-10.jsonl")
+# processCorpus("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/test-10.jsonl",
+#               "/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/test-10-nlg.jsonl")
+
+bulletins("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/test-10.jsonl")
