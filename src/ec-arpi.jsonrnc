@@ -1,0 +1,30 @@
+start = bulletin
+bulletin = {
+    "header":[info],
+    "names-en":[string],
+    "names-fr":[string],
+    "regions":[string],
+    "accum":[[info]],
+    "ciel":[[info]],
+    "climat_temp":[[info]],
+    "indice_uv":[[info]],
+    "pcpn":[pcpn],
+    "prob":[prob],
+    "rosee":[[info]],
+    "temp":[[info]],
+    "vents":[vents],
+    "en":lang,
+    "fr":lang,
+    "id":string
+}
+
+info     = string|number
+pcpn     = [info|pcpn]
+prob     = [info|prob]
+vents    = [info|vents]
+sentences= [string]
+lang     = {orig:string,
+            tok :{today:[sentences],
+                  tonight:[sentences],
+                  tomorrow:[sentences],
+                  tomorrow_night?:[sentences]}}
