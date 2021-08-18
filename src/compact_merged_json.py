@@ -50,7 +50,7 @@ def main_compact():
 
     with open(input_filename, 'rt', encoding='utf-8') as fin, open(output_json_filename, 'wt',
                                                                    encoding='utf-8') as fout:
-        for cur_line in tqdm(fin.readlines(), total=230218):
+        for cur_line in tqdm(fin, total=230218):
             cur_line = cur_line.replace('point_intermediaire', 'pi')  # shorten point_intermediaire
             bulletin: dict = json.loads(cur_line)
             bulletin.pop('indice_qa', None)  # remove air_quality
@@ -75,7 +75,7 @@ def main_partition():
     partition = {'train': [], 'dev': [], 'test': []}
 
     with open(input_filename, 'rt', encoding='utf-8') as fin:
-        for cur_line in tqdm(fin.readlines(), total=230218):
+        for cur_line in tqdm(fin, total=230218):
             bulletin: dict = json.loads(cur_line)
             convert_lists_to_tuples(bulletin)  # to fit in ram
             cur_slice = get_slice(bulletin['id'])
@@ -173,7 +173,7 @@ def main_tokenize():
     output_json_filename = sys.argv[3]
 
     with open(input_filename, 'rt', encoding='utf-8') as fin, open(output_json_filename, 'wt', encoding='utf-8') as fout:
-        for cur_line in tqdm(fin.readlines()):
+        for cur_line in tqdm(fin):
             bulletin: dict = json.loads(cur_line)
             bulletin['en'] = {'orig': bulletin['en'], 'tok': None}  # prepare data structure
             bulletin['fr'] = {'orig': bulletin['fr'], 'tok': None}

@@ -32,7 +32,7 @@ if __name__ == '__main__':
     textes = {'en': [], 'fr': []}
 
     with open(input_filename, 'rt', encoding='utf-8') as fin:
-        for cur_line in tqdm(fin.readlines(), total=230218):
+        for cur_line in tqdm(fin, total=230218):
             bulletin = json.loads(cur_line)
             check_bulletin(bulletin, stats, textes)
             nb_bulletins += 1
