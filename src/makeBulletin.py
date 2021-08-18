@@ -437,10 +437,10 @@ def forecast(fc,lang,title,beginHour,endHour,text):
     return [fmt(s,lang) for s in res if s!=None]
 
 ## start and end hour of each "period" of a bulletin
-hours ={"today":(5,19),
-        "tonight":(17,31),
-        "tomorrow":(30,49),
-        "tomorrow_night":(47,60)}
+hours ={"today":(5,23),              # EST (0,18)   DST (1,19)
+        "tonight":(23,35),           # EST (18,30)  DST (19,31)
+        "tomorrow":(35,53),          # EST (30,48)  DST (31,49)
+        "tomorrow_night":(53,65)}    # EST (48,60)  DST (49,61)
 
 tz    = None
 tzS   = None
