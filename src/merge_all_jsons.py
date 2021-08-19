@@ -50,9 +50,13 @@ def main():
     for dirpath, dirs, files in os.walk(input_dirname):
         region_files = [os.path.join(dirpath, f) for f in files if f.startswith("r") and f.endswith(".json")]
         for cur_filename in region_files:
-            cur_region: dict = json.load(open(cur_filename, 'rt'))
-            cur_id: str = get_id(cur_region)
-            cur_region['id'] = cur_id
+            bulletin: dict = json.load(open(cur_filename, 'rt'))
+            dirname = os.path.basename(os.path.dirname(cur_filename))
+            filename_issuehour = int(os.path.basename(dirname).split('.')[4][:-1])
+            assert filename_issuehour == bulletin['header'][0][7], \
+                f"Inconsistent issue hours, file: {filename_issuehour}, header: {bulletin['header'][0][7]}"
+            cur_id: str = get_id(bulletin)
+            bulletin['id'] = cur_id
 
             cur_slice = get_slice(cur_id)
 
@@ -62,10 +66,10 @@ def main():
             partition[cur_slice].append(cur_id)
 
             # write region file
-            output_file.write(json.dumps(cur_region, ensure_ascii=False) + '\n')
+            output_file.write(json.dumps(bulletin, ensure_ascii=False) + '\n')
 
             nb_bulletins_found += 1
-            if nb_bulletins_found % 100 == 0:
+            if nb_bulletins_found % 250 == 0:
                 print(nb_bulletins_found, file=sys.stderr, end=' ', flush=True)
             if nb_bulletins_found % 2000 == 0:
                 print('', file=sys.stderr, flush=True)
