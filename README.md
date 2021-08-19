@@ -8,7 +8,16 @@
 - `make_complete_json.py` : create json files for all Meteocode and Bulletin file
 - `parseMeteocode.py` : parse a Meteocode file to produce a JSON structure
 - `ppJson.py` : pretty print of a JSON in a form that is more compact and readable than the standard Python `pprint`
-- `stats.py` : compute statistics on the fields of the json files and the vocabulary used in the bulletins 
+- `stats.py` : compute statistics on the fields of the json files and the vocabulary used in the bulletins
+
+## Possible sequence to build dataset using these tools
+1. `make_code_regions.py` to build region mappings.
+2. `make_complete_json.py` to parse bulletins and create JSON files for each bulletin
+3. `merge_all_jsons.py` to create single JSONL file
+4. `compact_merged_json.py`
+    1. `trim` to optimize format
+    2. `partition` to partition in train/dev/test
+    3. `tokenize` to tokenize texts in a given JSONL file
 
 ## *data* directory structure
 
