@@ -25,7 +25,7 @@ def outQuoted(file,s):
     out(file,'"'+s+'"')
 
 ## by default the keys of an object are sorted
-def ppJson(file,obj,level=0,sortkeys=True):
+def ppJson(file,obj,level=0,sortkeys=False):
     if isinstance(obj,str):
         outQuoted(file,obj)
     elif obj==None:
@@ -69,7 +69,7 @@ if __name__ == '__main__':
         while True:
             try:
                 obj=json.loads(line)
-                ppJson(sys.stdout,obj,0,False)
+                ppJson(sys.stdout,obj)
                 break
             except:
                 line += next(sys.stdin)

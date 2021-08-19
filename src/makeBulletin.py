@@ -7,15 +7,21 @@ from weatherData import WeatherData
 
 import json, textwrap, re, sys, random, locale
 from ppJson import ppJson
+from nltk.tokenize import word_tokenize
 
-showData=True
+showData=False
 
 ### Text generation
 def fmt(jsrExp,lang):
     exp=jsrExp.lang(lang).pp() # pretty-print the json format
     # print(exp)
     # return textwrap.fill(,width=70);
-    return jsRealB(exp)
+    genText=jsRealB(exp)
+    if genText.startswith("@@@:") or genText.startswith("SyntaxError:"):
+        print(exp,file=sys.stderr)
+        print(genText,file=sys.stderr)
+        sys.exit(1)
+    return genText
 
 ### time generation
 def jsrTime(dt,lang):
@@ -69,7 +75,7 @@ def jsrDayPeriod(data,lang,hour):
             exp=jsrExp[lang]()
             if isTomorrow:
                 return exp.add(N("tomorrow" if lang=="en" else "demain"),0)
-            elif s!=6:
+            elif s!=18:
                 return exp.add(D("this" if lang=="en" else "ce"),0)
     
 ###   global header information
@@ -289,10 +295,12 @@ def winds(data,hasWindChill,lang):
                    S(N("vent").n("p"),PP(P("jusque"),P("à"),NO(maxS),Q("km/h")))
         else: return None
     iMax=speed.index(maxS)
+    windDir=jsrDirection[data["direction"][iMax]][lang]
     s=S(N("wind") if lang=="en" else N("vent").n("p"),
-        jsrDirection[data["direction"][iMax]][lang],
-        NO(maxS),Q("km/h"),
-        jsrDayPeriod(data,lang,data["start"][iMax]))
+        VP(V("become" if lang=="en" else "devenir").t("pr"),
+           windDir if lang=="en" else PP(P("de"),D("le"),windDir),
+           NO(maxS),Q("km/h"),
+           jsrDayPeriod(data,lang,data["start"][iMax])))
     lineMax=data.line(iMax)
     valCol=data.colIndex["value"]
     if valCol<len(lineMax) and type(lineMax[valCol]) is list:
@@ -329,7 +337,7 @@ def temperatures(data,lang):
     """
     def jsrTemp(val):
         if val==0: return N("zero") if lang=="en" else N("zéro")
-        if val<0 : return AdvP(Adv("minus" if lang=="en" else Adv("moins")),NO(abs(val)))
+        if val<0 : return AdvP(A("minus") if lang=="en" else Adv("moins"),NO(abs(val)))
         if val<=5 : return AP(A("plus"), NO(val)) if lang=="en" else AdvP(Adv("plus"),NO(val))
         return NO(val)
     
@@ -347,9 +355,8 @@ def temperatures(data,lang):
             return S(NP(Adv("high") if lang=="en" else N("maximum")),jsrTemp(max(values)))
     if iMin>=0 and iMax>=0:
         return S(N("temperature" if lang=="en" else "température"),
-                 VP(V("be" if lang=="en" else "être").t("f"),
                     PP(P("between" if lang=="en" else "entre"),jsrTemp(values[iMin])),
-                       C("and" if lang=="en" else "et"),jsrTemp(values[iMax])))
+                       C("and" if lang=="en" else "et"),jsrTemp(values[iMax]))
     if iMin>=0:
         return S(NP(N("low" if lang=="en" else "minimum"),jsrTemp(data["value"][iMin])),
                  jsrDayPeriod(data,lang,data["start"][iMin]))
@@ -394,7 +401,7 @@ def humidex(data,lang):
 #      Low (0-2), Moderate (3-5), High (6-7), Very High (8-10), and Extreme (11+)
 uv_ranges= [(2,   {"en":A("low"),                     "fr":A("bas")}), 
             (5,   {"en":A("moderate"),                "fr":A("modéré")}), 
-            (7,   {"en":A("high"),                    "fr":A("élévé")}), 
+            (7,   {"en":A("high"),                    "fr":A("élevé")}), 
             (10,  {"en":AdvP(Adv("very"),Adv("high")),"fr":AdvP(Adv("très"),A("élevé"))}), 
             (1000,{"en":A("extreme"),                 "fr":A("extrême")})
            ]
@@ -437,10 +444,34 @@ def forecast(fc,lang,title,beginHour,endHour,text):
     return [fmt(s,lang) for s in res if s!=None]
 
 ## start and end hour of each "period" of a bulletin
-hours ={"today":(5,23),              # EST (0,18)   DST (1,19)
-        "tonight":(23,35),           # EST (18,30)  DST (19,31)
-        "tomorrow":(35,53),          # EST (30,48)  DST (31,49)
-        "tomorrow_night":(53,65)}    # EST (48,60)  DST (49,61)
+earlyAM ={"today":(5,18),              # EST (0,13)   DST (1,14)
+          "tonight":(18,30),           # EST (13,25)  DST (14,26)
+          "tomorrow":(30,42),          # EST (25,37)  DST (26,41)
+         }
+lateAM = {"today":(12,18),             # EST (7,13)   DST (6,14)
+          "tonight":(18,30),           # EST (13,25)  DST (14,26)
+          "tomorrow":(30,42),          # EST (25,37)  DST (26,38)
+         }
+latePM = {"tonight":(16,30),           # EST (11,25)  DST (12,26)
+          "tomorrow":(30,42),          # EST (25,37)  DST (26,41)
+          "tomorrow_night":(42,54)     # EST (37,49)  DST (38,50)
+         }
+
+bulletinHours = {
+   "FPCN71":{"0500":earlyAM, "1130":lateAM, "1545":latePM},
+   "FPCN73":{"0500":earlyAM, "1130":lateAM, "1545":latePM},
+   "FPCN74":{"0500":earlyAM, "1130":lateAM, "1545":latePM},
+   "FPTO11":{"0500":earlyAM, "1100":lateAM, "1530":latePM},
+   "FPTO12":{"0530":earlyAM, "1130":lateAM, "1600":latePM},
+   "FPTO13":{"0530":earlyAM, "1130":lateAM, "1600":latePM},
+}
+
+titles = {
+    "today":   {"en":"Today",   "fr":"Aujourd'hui"},
+    "tonight": {"en":"Tonight", "fr":"Ce soir et cette nuit"},
+    "tomorrow":{"en":"Tomorrow","fr":"Demain"},
+    "tomorrow_night":{"en":"Tomorrow night","fr":"Demain soir et nuit"},
+}
 
 tz    = None
 tzS   = None
@@ -475,26 +506,32 @@ def getTimeInfo(fc,lang):
         print("bad header",header)
     return (bulletinName,beginTime,nextTime)
 
-def getSents(fc,lang):
+nbPeriods=0
+def genPeriods(fc,lang,origSents):
+    global nbPeriods
     (bulletinName,beginTime,nextTime)=getTimeInfo(fc,lang)
-    res = {}
+    res = {"orig":{},"jsr":{},"tok":{}}
+    m=re.match(r"(?P<bName>\w+)-(?P<year>\d+)-(?P<month>\d+)-(?P<day>\d+)-(?P<hour>\d+)",fc["id"])
+    bulletin=m.group("bName").upper()
+    hour=str(int(m.group("hour"))-tzHours*100).zfill(4)
     periods = fc[lang].keys()
-    for period in fc[lang]["tok"].keys():
-        (startHour,endHour)=hours[period]
-        res[period]=forecast(fc,lang,period,startHour+tzHours,endHour+tzHours,"")
-        if showData:print("**> "+" ".join(res[period]))
+    for i,period in zip(range(0,4),fc[lang]["tok"].keys()):
+        origSent=origSents[i]
+        res["orig"][period]=origSent
+        nbPeriods+=1
+        # if showData:
+        print("%6d:: %s: %s %s [%s]"%(nbPeriods,fc["id"],bulletin,hour,period))
+        (startHour,endHour)=bulletinHours[bulletin][hour][period]
+        jsrFC=forecast(fc,lang,period,startHour+tzHours,endHour+tzHours,"")
+        res["jsr"][period]=jsrFC
+        res["tok"][period]=[word_tokenize(sent,{'en':'english','fr':'french'}[lang]) for sent in jsrFC]
+        if showData:print("**> "+" ".join(res["jsr"][period]))
     return res
 
-titles={
-    "today":   {"en":"Today",   "fr":"Aujourd'hui"},
-    "tonight": {"en":"Tonight", "fr":"Ce soir et cette nuit"},
-    "tomorrow":{"en":"Tomorrow","fr":"Demain"},
-    "tomorrow_night":{"en":"Tomorrow night","fr":"Demain soir"},
-}
         
 def bulletin(fc,lang):
     (bulletinName,beginTime,nextTime)=getTimeInfo(fc,lang)
-    # texts=[t.strip().replace('\n'," ") for t in re.split(r"[A-Z][a-z]+\.\.",fc[lang]["orig"])]
+    origSents=[t.strip().replace('\n'," ") for t in re.split(r"(?m)^.+?\.\.",fc[lang]["orig"])][1:]
     res=header(lang,bulletinName,beginTime,nextTime)
     res.extend(fc["names-"+lang])
     res[-1]=res[-1]+"."  # add full stop at the end of regions
@@ -508,10 +545,10 @@ def bulletin(fc,lang):
     #               hoursTonight+tzHours,hoursTomorrow+tzHours,texts[3])
     # if showData:print("==>",para)
     # res.append(para)
-    sents=getSents(fc,lang)
-    for period in sents:
+    sents=genPeriods(fc,lang,origSents)
+    for period in sents["jsr"]:
         title=fmt(jsrDay(beginTime+timedelta(days=1)),lang) if period.startswith("tomorrow") else titles[period][lang]
-        res.append(textwrap.fill(title+".."+" ".join(sents[period])))
+        res.append(textwrap.fill(title+".."+" ".join(sents["jsr"][period])))
     print("\n** %s\n"%("generated" if lang=="en" else "généré"),"\n".join(res))
     print("\n** original\n",fc[lang]["orig"])
 
@@ -522,17 +559,20 @@ def bulletins(jsonlFN):
         bulletin(fc,"en")
         bulletin(fc,"fr")
 
-def processCorpus(inJsonl,outJsonl):
-    print("\n *** Processing ",inJsonl)
-    outJson=open(outJsonl,"w",encoding="utf=8")
-    for line in open(inJsonl,"r",encoding="utf-8"):
+def processCorpus(inJsonlFN):
+    def origSents(lang):
+        return [t.strip().replace('\n'," ") for t in re.split(r"(?m)^.+?\.\.",fc[lang]["orig"])]
+    print("\n *** Processing ",inJsonlFN)
+    outJsonlFN=inJsonlFN.replace(".jsonl","-jsr.jsonl")
+    outJsonl=open(outJsonlFN,"w",encoding="utf=8")
+    for line in open(inJsonlFN,"r",encoding="utf-8"):
         fc=json.loads(line)
         res={"id":fc["id"]}
-        res["en"]=symbolicNLG(fc,"en")
-        res["fr"]=symbolicNLG(fc,"fr")
-        outJson.write(json.dumps(res,indent=None,ensure_ascii=False))
-        outJson.write("\n")
-        
+        res["en"]=genPeriods(fc,"en",origSents("en")[1:])
+        res["fr"]=genPeriods(fc,"fr",origSents("fr")[1:])
+        outJsonl.write(json.dumps(res,indent=None,ensure_ascii=False))
+        outJsonl.write("\n")
+        if nbPeriods>1000: break    
         
     
 ### make sure that a jsRealB server is started in a terminal, using the following call
@@ -544,4 +584,7 @@ def processCorpus(inJsonl,outJsonl):
 # processCorpus("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/test-10.jsonl",
 #               "/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/test-10-nlg.jsonl")
 
-bulletins("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/test-10.jsonl")
+# bulletins("/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/test-10.jsonl")
+
+processCorpus(sys.argv[1] if len(sys.argv)>1 else
+              "/Users/lapalme/Documents/GitHub/IVADO-BuildData/testDir/JSON/test-10.jsonl")
