@@ -60,7 +60,7 @@ An *hour* expressed in Universal Coordinated Time (UTC). The hours are accumulat
     indice_uv : start end value
         value : float with one decimal
 
-##  `niveau_neige` : 
+##  `niveau_neige` : level for solid precipitations
     niveau_neige : start end code value
         code   : type of the value
         value  : number of meters (rounded at 100) in altitude at which the precipitations start to solidify

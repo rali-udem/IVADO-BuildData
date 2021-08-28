@@ -1,0 +1,156 @@
+<h1 id="documentation_on_the_meteocode_fields">Documentation on the Meteocode fields</h1>
+
+<p>Information taken from <em>Météocode Coding standard Version 3.9.1</em> (Meteocode38.doc)
+We only give frequently occurring values, refer to the document for  undocumented values. The original being in French, we give equivalent English terms after <code>=&gt;</code>.</p>
+
+<p><strong>Important</strong>:
+Most fields start with <code>start</code> and <code>end</code> which are given in <em>hours</em>. 
+An <em>hour</em> expressed in Universal Coordinated Time (UTC). The hours are accumulated from “0” hour corresponding to 00Z of day 1 (UTC date) of the forecast; for example day 1 of the time zone EST is: [5..29[, day 2: [29..53[, day 3: [53..77[ &#8230;]. Negative hours refer to historical data.</p>
+
+<h2 id="accum_precipitation_accumulation_sect_344_p_22"><code>accum</code> : precipitation accumulation (sect 3.4.4, p. 22)</h2>
+
+<pre><code>accum: start end type code certainty value-start value-end?
+    code : "additionnelle" | "partielle" | "totale" =&gt;
+           "additionnal" | "partial" | "total"
+    certainty : "moins_de" | "plus_de" | "possible" | "pouvant_atteindre" | "pouvant_depasser" | "pres_de" =&gt;
+                "less than" | "more than" | "possible" | "possibly reaching" | "possibly exceeding" | "near"
+</code></pre>
+
+<h2 id="avert_warning_section_345_p_24"><code>avert</code> : warning (section 3.4.5, p 24)</h2>
+
+<pre><code>avert : start end type status code
+    type : "avertissement" | "avis" | "veille" =&gt;  
+           "warning" | "advisory" | "watch"
+    status : "annule" | "baisse" | "emis" | "en_vigueur" | "fin" | "hausse" | "maintenu" | "mis_a_jour" | "nil" =&gt;
+             "cancelled" | "downgraded" | "issued" | "in effect" | "ended" | "upgraded" | "continued" | "updated" | "nil"
+    code : "air_arctique"| "blizzard" | "bourrasques_neige" |  "brouillard" | "bruine_verglacante" |
+           "chaleur_extreme" | "chaleur_humidite" | "chasse_poussiere" | "coup_vent" | "divers" | 
+           "embrun_verglacant" | "froid_extreme" | "froid_intense" | "gel_general" | "gel_sol" | 
+           "grele" | "gresil" | "humidex" | "ligne_grain" | "neige" | "neige_abondante" | 
+           "neige_abondante_poudrerie" | "neige_gresil" | "neige_poudrerie" | "nil" | "niveau_eleve_eau" | 
+           "onde_tempete" | "orage_marine" | "orage_violent" | "ouragan" | "pluie_abondante" | 
+           "pluie_bruine_verglacante" | "pluie_verglacante" | "poudrerie" | "qualite_air"|
+           "refroidissement_soudain" | "sante_publique" | "smog" | "special_marine" | "tempete_hivernale" | 
+           "tempete_tropicale" |  "tornade" | "trombe_marine" | "vague_chaleur" | "vague_froid" | "vents_marine"| 
+           "vents_suetes" | "vents_tempete" | "vents_violents" | "wreckhouse"
+           =&gt;
+           "artic outflow"| "blizzard" | "snow qualls" |  "fog" | "freezing drizzle" |
+           "extreme heat" | "high heat and humidiy" | "blowind dust" | "gale" | "weather warning" | 
+           "freezing spray" | "extreme cold" | "wind chill" | "frost" | "groud frost" | 
+           "hail storm" | "ice pellets" | "humidex" | "squall line" | "snow" | "heavy snow" | 
+           "heavy snow and blowing snow" | "snow and ice pellets" | "snow and blowing snow" | "nil" | "high water level" | 
+           "storm surge" | "orage_marine" | "severe thunderstorm" | "hurrican" | "heavy rain" | 
+           "freezing (rain or drizzle)" | "freezing rain" | "blowing snow" | "air quality"|
+           "temperature drop" | "air quality and health" | "smog" | "marine special" | "winter storm" | 
+           "tropical storm" |  "tornado" | "waterspout" | "heat wave" | "cold wave" | "vents_marine"| 
+           "Suetes winds" | "storm" | "strong winds" | "Wreckhouse winds"
+</code></pre>
+
+<h2 id="ciel_cloud_cover_sect_346_p_28"><code>ciel</code> : cloud cover (sect 3.4.6, p. 28)</h2>
+
+<pre><code>ciel: start end neb-start neb-end {ceiling-height}
+    neb-start,neb-end : cloud cover in tenths of cloud-cover at start and end time
+    ceiling-height` : 1..10 (1 being low and 10 high)
+</code></pre>
+
+<h2 id="climat_temp_climatological_data_for_temperature_sect_349_p_31"><code>climat_temp</code> : climatological data for temperature (sect 3.4.9, p 31)</h2>
+
+<pre><code>climat_temp : start end type value
+    type : "max" | "min" | "moy" =&gt;
+           "max" | "min" | "average"
+    value : degree in Celsius
+</code></pre>
+
+<h2 id="indice_qa_air_quality_index_sect_3414_p_35"><code>indice_qa</code> : air quality index (sect 3.4.14, p 35)</h2>
+
+<pre><code>indice_qa : start end value
+    value : 0..100 (float)
+</code></pre>
+
+<h2 id="indice_uv_uv_index_sect_3416_p_36"><code>indice_uv</code> _: UV index (sect 3.4.16, p 36)</h2>
+
+<pre><code>indice_uv : start end value
+    value : float with one decimal
+</code></pre>
+
+<h2 id="niveau_neige_"><code>niveau_neige</code> :</h2>
+
+<pre><code>niveau_neige : start end code value
+    code   : type of the value
+    value  : number of meters (rounded at 100) in altitude at which the precipitations start to solidify
+</code></pre>
+
+<h2 id="pcpn_precipitations_sect_3418_p_37"><code>pcpn</code> : precipitations (sect 3.4.18, p 37)</h2>
+
+<pre><code>pcpn : start end certainty code type intensity frequency exception?
+    certainty : "certain" | "possible" | "risque" =&gt;
+                "certain" | "possible" | "risk"
+    code : "debut" | "debut_fin" | "exact" | "fin" =&gt;
+           "start" | "start_end" | "exact" | "end"
+    type : "averses" | "averses_neige" | "averses_neige_fondante" | "blizzard" | 
+           "bourrasques_neige" | "bruine" | "bruine_verglacante" | 
+           "cristaux_glace" |"grele"| "gresil" | "neige" | "neige_fondante" | 
+           "orages" | "pluie" | "pluie_verglacante" | "poudrerie" 
+           =&gt;
+           "showers" | "flurries" | "wet flurries" | "blizzard" | 
+           "snow squalls" | "drizzle" | "freezing drizzle" | 
+           "ice crystals" |"hail"| "ice pellets" | "snow" | "wet snow" | 
+           "thunderstorm" | "rain" | "freezing rain" | "blowing snow"
+    intensity : "faible" | "fort" | "modere" | "nil" | "tres_faible" =&gt;
+                "light" | "heavy" | "moderate" | *implicit* | "very light"
+    frequency : "bref" | "continuel" | "frequent" | "occasionnel" | "peu" =&gt;
+                "brief" | "continual" | "frequent" | "occasionnal" | "few"
+    exception : embedded list of pcpn
+</code></pre>
+
+<h2 id="prob_precipitation_probability_sect_3420_p_41"><code>prob</code>: precipitation probability (sect 3.4.20, p 41)</h2>
+
+<pre><code>prob : "seuil" value [start end prob]+
+    value :  threshold (“seuil”) defining a probability of precipitation of a trace or more.
+    prob : 0..100 percentage of probability
+</code></pre>
+
+<h2 id="rosee_dew_point_sect_3424_p_43"><code>rosee</code> : dew point (sect 3.4.24, p 43)</h2>
+
+<pre><code>rosee : start end trend value
+     trend : "baisse" | "hausse" | "point_intermediaire" | "max" | "min" | "stationnaire" =&gt;
+             "falling" | "rising" | "middle point" | "high" | "low" | "steady"
+     value : int degree Celsius
+</code></pre>
+
+<h2 id="temp_temperature_sect_3425_p_44"><code>temp</code> : temperature (sect 3.4.25, p 44)</h2>
+
+<pre><code>temp : start end trend value
+     trend : "baisse" | "hausse" | "point_intermediaire" | "max" | "min" | "stationnaire" =&gt;
+             "falling" | "rising" | "middle point" | "high" | "low" | "steady"
+     value : int degree Celsius
+</code></pre>
+
+<h2 id="vents_winds_sect_3427_p_47"><code>vents</code> : winds (sect 3.4.27, p 47)</h2>
+
+<pre><code>vents : start end direction modif? speed value exception?
+     direction : "e" | "nil" | "n" | "ne" | "nw" | "w" | "ely" | "nly" | "nely" | "nwly" | 
+                 "wly" | "sly"| "sely" | "swly" | "sly" | "sely" | "sw" | "vrbl"
+                 =&gt;
+                 "e" | "nil" | "n" | "ne" | "nw" | "w" | "ely" | "nly" | "nely" | "nwly" | 
+                  "wly" | "sly"| "sely" | "swly" | "sly" | "sely" | "sw" | "vrbl"
+                 *cardinal points with "erly"*
+     exception : start end excType excvalue (within a list)
+         excType : "rafales" | "bourrasques" =&gt; "gust" | "squall"
+</code></pre>
+
+<h2 id="visib_visibility_sect_3428_p_50"><code>visib</code> : visibility (sect 3.4.28, p 50)</h2>
+
+<pre><code>visib : start end type freq
+    type : "bancs_brouillard" | "bancs_brouillard_glace" | "brouillard" | "brouillard_glace"|
+            "brume" | "brume_seche" | "brumeux" | "brumeux_endroits" | "chasse_poussiere" | 
+            "fumee" | "fumee_endroits" | "fumee_mer" | "pcpn" | "poudrerie" | "poudrerie_basse" |
+            "poudrerie_endroits" | "poudrerie_haute_endroits" | "smog"
+            =&gt;
+           "fog banks" | "ice fog banks" | "fog" | "brouillard_glace"|
+            "mist" | "hazy" | "foggy" | "fog patches" | "blowing dust" | 
+            "smoke" | "local smoke" | "see smoke" | "due to precipitation" | "blowind snow" | "drifting snow" |
+            "local drifting snow" | "local blowing snow" | "smog"
+    freq : "bref" | "continu" | "frequent" | "occasionnel" | "peu" =&gt;
+           "brief" | "continuous" | "frequent" | "occasionnal" | "low"
+</code></pre>
